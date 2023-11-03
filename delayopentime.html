@@ -106,7 +106,7 @@
                 const minutes = Math.floor((timeRemaining % 3600000) / 60000);
                 const seconds = Math.floor((timeRemaining % 60000) / 1000);
 
-                countdownElement.textContent = `Đém ngược: ${hours} giờ ${minutes} phút ${seconds} giây`;
+                countdownElement.textContent = `Đếm ngược: ${hours} giờ ${minutes} phút ${seconds} giây`;
                 setTimeout(updateCountdown, 1000); // Check every 1 second (1000 milliseconds)
             } else {
                 countdownElement.textContent = 'Unlocking...';
