@@ -4,8 +4,9 @@ nav{
     position: fixed;
 }
 
-
-
+body{
+    background-color: #1f2833;
+}
 
 
 /*Screen size cho 1400 trở lên*/
@@ -13,18 +14,24 @@ nav{
     .row{
         margin-top: 40px ;
     }
+    .card1{
+        width: 450px;
+        height: 400px;
+        margin-top: 140px;
+        
+    }
+    .card1 a{
+        text-decoration: none;
+    }
     .card{
-        width: 480px;
+        
         transition: transform 0.2s;
     }
     .card:hover{
-        transform: scale(1.04);
+        transform: scale(1.03);
     }
     .card:nth-child(1){
-        margin-left: 10px;
+        margin-left: 46px;
     }
 
-    .all-card a{
-        text-decoration: none;
-    }
   }

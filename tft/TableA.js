@@ -1,6 +1,6 @@
 let SHEET_ID = '1mHt4b8F3Otm0ZLKG98VQo5Q5U_mcw8N-eFvoorUukYU';
 let SHEET_TITLE = 'Bảng xếp hạng';
-let SHEET_RANGE_A = 'B4:G11';
+let SHEET_RANGE_A = 'B4:H11';
 
 let FULL_URL_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A}`;
 
@@ -18,6 +18,7 @@ fetch(FULL_URL_A)
             let cell4 = document.createElement('td');
             let cell5 = document.createElement('td');
             let cell6 = document.createElement('td');
+            let cell7 = document.createElement('td');
 
             cell1.textContent = rowData[0].v;
             cell2.textContent = rowData[1].v;
@@ -25,6 +26,7 @@ fetch(FULL_URL_A)
             cell4.textContent = rowData[3].v;
             cell5.textContent = rowData[4].v;
             cell6.textContent = rowData[5].v;
+            cell7.textContent = rowData[5].v;
 
             row.appendChild(cell1);
             row.appendChild(cell2);
@@ -32,7 +34,7 @@ fetch(FULL_URL_A)
             row.appendChild(cell4);
             row.appendChild(cell5);
             row.appendChild(cell6);
-            
+            row.appendChild(cell7);
 
 
             dataBody.appendChild(row);

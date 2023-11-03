@@ -1,23 +1,38 @@
-
-
-table.table-a,table.table-b,table.table-c,table.table-d{
+body{
+    background-color: #1f2833;
+}
+nav{
+    position: fixed;
+}
+table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
     border: 1px solid black;
     text-align: center;
+    
 }
 
 
 
+
+h2{
+    color: white;
+}
 @media screen and (min-width: 1400px) {
-    table.table-a,table.table-b,table.table-c,table.table-d{
-        width: 1000px;
-        margin: 20px 0 20px 30px;
+    table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
+        width: 1200px;
+        margin: 30px auto;
+    }
+
+    .button{
+        margin-left: 160px;
+        margin-top: 90px;
     }
     button.filter-table:nth-child(1){
         margin-left: 30px;
     }
 
     div.button-fliter{
-        margin-top: 40px;
+        margin-left: 130px;
+        margin-top: 20px;
     }
     button.filter-table{
         margin-right: 10px;
@@ -27,10 +42,12 @@ table.table-a,table.table-b,table.table-c,table.table-d{
         background-color: white;
         color: black;
         transition: 0.4s background-color;
+        border-radius: 5px;
     }
     button.filter-table:hover{
         background-color: black;
         color: white;
+        border: 1px solid black;
     }
 
 }
