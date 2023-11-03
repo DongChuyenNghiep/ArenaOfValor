@@ -10,7 +10,21 @@ table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.ta
     
 }
 
-
+button.filter-table{
+    margin-right: 10px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 0.4s background-color;
+    border-radius: 5px;
+}
+button.filter-table:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
 
 
 h2{
@@ -34,20 +48,45 @@ h2{
         margin-left: 130px;
         margin-top: 20px;
     }
-    button.filter-table{
-        margin-right: 10px;
-        width: 120px;
-        height: 40px;
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        transition: 0.4s background-color;
-        border-radius: 5px;
+    
+
+}
+
+@media screen and (max-width: 1399.98px) and (min-width:768px){
+    .button{
+        margin-left: 60px;
+        margin-top: 90px;
     }
-    button.filter-table:hover{
-        background-color: black;
-        color: white;
-        border: 1px solid black;
+    button.filter-table:nth-child(1){
+        margin-left: -70px;
     }
 
+    div.button-fliter{
+        margin-left: 130px;
+        margin-top: 20px;
+    }
+    table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .button{
+        margin-left: 135px;
+        margin-top: 100px;
+        display: block;
+    }
+    button.filter-table:nth-child(1){
+        margin-left: 00px;
+    }
+
+    div.button-fliter{
+        margin-left: 130px;
+        margin-top: 20px;
+    }
+    table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
+        width: 100%;
+    }
 }
