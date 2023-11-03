@@ -1,0 +1,30 @@
+
+/*Phần navigator bar*/
+nav{
+    position: fixed;
+}
+
+
+
+
+
+/*Screen size cho 1400 trở lên*/
+@media screen and (min-width: 1400px) {
+    .row{
+        margin-top: 40px ;
+    }
+    .card{
+        width: 480px;
+        transition: transform 0.2s;
+    }
+    .card:hover{
+        transform: scale(1.04);
+    }
+    .card:nth-child(1){
+        margin-left: 10px;
+    }
+
+    .all-card a{
+        text-decoration: none;
+    }
+  }

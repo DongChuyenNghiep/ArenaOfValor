@@ -1,0 +1,36 @@
+
+
+table.table-a,table.table-b,table.table-c,table.table-d{
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 1400px) {
+    table.table-a,table.table-b,table.table-c,table.table-d{
+        width: 1000px;
+        margin: 20px 0 20px 30px;
+    }
+    button.filter-table:nth-child(1){
+        margin-left: 30px;
+    }
+
+    div.button-fliter{
+        margin-top: 40px;
+    }
+    button.filter-table{
+        margin-right: 10px;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        transition: 0.4s background-color;
+    }
+    button.filter-table:hover{
+        background-color: black;
+        color: white;
+    }
+
+}
