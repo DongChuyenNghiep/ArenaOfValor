@@ -24,7 +24,7 @@ fetch(FULL_URL_B)
             cell4.textContent = rowData[3].v;
             cell5.textContent = rowData[4].v;
             cell6.textContent = rowData[5].v;
-            cell7.textContent = rowData[5].v;
+            cell7.textContent = rowData[6].v;
 
             row.appendChild(cell1);
             row.appendChild(cell2);
