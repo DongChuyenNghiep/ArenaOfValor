@@ -34,11 +34,14 @@ h2{
     color: white;
 }
 @media screen and (min-width: 1400px) {
-    table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
-        width: 1200px;
-        margin: 30px auto;
+    table.table-a,table.table-b,table.table-c,table.table-d,table.table-all{
+        width: 1250px;
+        margin: 0px auto 30px;
     }
-
+    table.table-final{
+        width: 1400px;
+        margin: 0px auto 30px;
+    }
     .button{
         margin-left: 160px;
         margin-top: 90px;
