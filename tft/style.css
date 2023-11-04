@@ -5,9 +5,8 @@ nav{
     position: fixed;
 }
 table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.table-final{
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
-    
 }
 
 button.filter-table{
@@ -17,7 +16,7 @@ button.filter-table{
     cursor: pointer;
     background-color: white;
     color: black;
-    transition: 0.4s background-color;
+    transition: 0.3s background-color;
     border-radius: 5px;
 }
 button.filter-table:hover{
@@ -79,11 +78,11 @@ h2{
 @media screen and (max-width:768px) {
     .button{
         margin-left: 135px;
-        margin-top: 100px;
+        margin-top: 120px;
         display: block;
     }
     button.filter-table:nth-child(1){
-        margin-left: 00px;
+        margin-left: 0px;
     }
 
     div.button-fliter{
