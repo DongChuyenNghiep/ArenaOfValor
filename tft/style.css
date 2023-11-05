@@ -28,7 +28,26 @@ button.filter-table:focus{
     background-color: rgba(0, 255, 255, 0.762);
     color: white;
 }
-
+.golden{
+    background-color: gold;
+}
+.silver{
+    background-color: silver;
+}
+.bronze{
+    background-color: #cd7f32;
+}
+.table-final{
+    width: 1350px;
+    background-color: white;
+    font-weight: 600;
+}
+tr{
+    border: 1px black solid;
+}
+td,th{
+    padding: 8px 0;
+}
 
 h2{
     color: white;
@@ -75,6 +94,7 @@ h2{
         width: 90%;
         margin: 20px auto;
     }
+    
 }
 
 

@@ -11,6 +11,7 @@ fetch(FULL_URL_FINAL)
         for (let i = 0; i < data.table.rows.length; i++) {
             let rowData = data.table.rows[i].c;
             let row = document.createElement('tr');
+
             let cell1 = document.createElement('td');
             let cell2 = document.createElement('td');
             let cell3 = document.createElement('td');
@@ -59,6 +60,15 @@ fetch(FULL_URL_FINAL)
             row.appendChild(cell13);
             row.appendChild(cell14);
 
+            if (i == 0) {
+                row.className = "golden";
+            }
+            if (i == 1) {
+                row.className = "silver";
+            }
+            if (i == 2) {
+                row.className = "bronze";
+            }
             dataBody.appendChild(row);
         }
     });
