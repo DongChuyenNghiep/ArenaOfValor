@@ -9,6 +9,10 @@ table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.ta
     text-align: center;
 }
 
+.yellow{
+    background-color: rgba(255, 255, 0, 0.762)6, 156, 45;
+}
+
 button.filter-table{
     margin-right: 10px;
     width: 120px;
@@ -27,6 +31,10 @@ button.filter-table:hover{
 button.filter-table:focus{
     background-color: rgba(0, 255, 255, 0.762);
     color: white;
+}
+.table_test_final h2{
+
+    margin: 20px auto 10px;
 }
 .golden{
     background-color: gold;
@@ -95,6 +103,7 @@ h2{
         width: 90%;
         margin: 20px auto;
     }
+
     
 }
 

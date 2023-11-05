@@ -36,7 +36,11 @@ fetch(FULL_URL_ALL)
             row.appendChild(cell6);
             row.appendChild(cell7);
             row.appendChild(cell8);
+            
 
+            if (i < 9 ){
+                row.className = 'table-warning';
+            }
             dataBody.appendChild(row);
         }
     });
