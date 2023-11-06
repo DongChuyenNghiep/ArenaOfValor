@@ -25,7 +25,14 @@ body{
     justify-content: space-between;
     padding: 5px 20px;
 }
+.loser-darker{
+    filter: brightness(60%);
+}
 
+.winner-brighter{
+    filter: brightness(105%);
+    color:rgba(255, 255, 0, 0.841);
+}
 
 .team, .score-container {
     display: flex;

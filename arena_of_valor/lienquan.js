@@ -1,6 +1,6 @@
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
 let SHEET_TITLE = 'Vong_loai';
-let SHEET_RANGE_A = 'A4:G11';
+let SHEET_RANGE_A = 'A4:G15';
 
 let FULL_URL_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A}`;
 
@@ -14,7 +14,7 @@ fetch(FULL_URL_A)
       let rowData = data.table.rows[i].c;
       
       let match = document.createElement('h6')
-      match.textContent = "Match " + rowData[6].v;
+      match.textContent = "Trận " + rowData[6].v;
       match.classList.add('match');
       dataBody.appendChild(match)
 
@@ -67,8 +67,28 @@ fetch(FULL_URL_A)
       winnerSpan.classList.add('winner');
       loseSpan.classList.add('loser');
       // Check for the winner condition
+
+      // Create a team div to wrap the team name and logo
+      let teamDiv2 = document.createElement('div');
+      teamDiv2.classList.add('team');
+
+      let span4 = document.createElement('span');
+      span4.textContent = rowData[4].v;
+      span4.classList.add('team-name');
+      teamDiv2.appendChild(span4);
+
+      // Create an image element for the team logo
+      let img2 = document.createElement('img');
+      img2.classList.add('team-logo');
+      img2.src = rowData[5].v; // Set the image source from the data
+      img2.alt = rowData[4].v + ' Logo'; // Set the alt text based on the team name
+      teamDiv2.appendChild(img2);
+
       if (parseInt(rowData[2].v) > parseInt(rowData[3].v)) {
-        
+        img2.classList.add('loser-darker');
+        span4.classList.add('loser-darker');
+        img1.classList.add('winner-brighter');
+        span1.classList.add('winner-brighter');
         winnerSpan.textContent = '<'; // Set the text for winnerSpan
         loseSpan.textContent = '\u2009'; // Set the text for loseSpan
          // Add the 'winner' class
@@ -80,12 +100,11 @@ fetch(FULL_URL_A)
         
       }
 
-      // Append the score span to the score container div
-      
-
-      // Append scoreContainerDiv to the row div
-      
       else if (parseInt(rowData[2].v) < parseInt(rowData[3].v)) {
+        img1.classList.add('loser-darker');
+        span1.classList.add('loser-darker');
+        img2.classList.add('winner-brighter');
+        span4.classList.add('winner-brighter');
         winnerSpan.textContent = '>'; // Set the text for winnerSpan
         loseSpan.textContent = '\u2009'; // Set the text for loseSpan
         winnerSpan.classList.add('loser'); // Add the 'winner' class
@@ -103,21 +122,6 @@ fetch(FULL_URL_A)
 
       scoreContainerDiv.appendChild(scoreSpan);
       rowDiv.appendChild(scoreContainerDiv);
-      // Create a team div to wrap the team name and logo
-      let teamDiv2 = document.createElement('div');
-      teamDiv2.classList.add('team');
-
-      let span4 = document.createElement('span');
-      span4.textContent = rowData[4].v;
-      span4.classList.add('team-name');
-      teamDiv2.appendChild(span4);
-
-      // Create an image element for the team logo
-      let img2 = document.createElement('img');
-      img2.classList.add('team-logo');
-      img2.src = rowData[5].v; // Set the image source from the data
-      img2.alt = rowData[4].v + ' Logo'; // Set the alt text based on the team name
-      teamDiv2.appendChild(img2);
 
       // Append the team div to the row div
       rowDiv.appendChild(teamDiv2);
