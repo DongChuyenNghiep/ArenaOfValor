@@ -23,7 +23,7 @@ body{
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 5px 20px;
 }
 
 
@@ -82,7 +82,7 @@ h6.match:nth-child(1){
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 5px 25px;
     }
 }
 
@@ -95,7 +95,7 @@ h6.match:nth-child(1){
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 5px 5px;
+    padding: 7px 5px;
     }
     .score-container {
         text-align: center;

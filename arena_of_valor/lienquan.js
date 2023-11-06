@@ -73,7 +73,6 @@ fetch(FULL_URL_A)
         loseSpan.textContent = '\u2009'; // Set the text for loseSpan
          // Add the 'winner' class
         scoreSpan.appendChild(winnerSpan);
-        
         scoreSpan.appendChild(span2);
         scoreSpan.appendChild(gachSpan);
         scoreSpan.appendChild(span3);
