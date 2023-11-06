@@ -1,5 +1,5 @@
 body{
-    background-color: #1f2833;
+    background-color: #212529;
 }
 nav{
     position: fixed;
@@ -8,6 +8,7 @@ table.table-a,table.table-b,table.table-c,table.table-d,table.table-all,table.ta
     border: 1px solid white;
     text-align: center;
 }
+
 
 .yellow{
     background-color: rgba(255, 255, 0, 0.762)6, 156, 45;

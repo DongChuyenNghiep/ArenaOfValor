@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: #1f2833;
+    background-color: #212529;
     color: white;
     font: 17px;
 }
@@ -23,7 +23,7 @@ body{
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 0 20px;
 }
 
 
@@ -91,11 +91,11 @@ h6.match:nth-child(1){
         display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    width: 95%;
+    width: 96%;
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 5px 5px;
     }
     .score-container {
         text-align: center;
@@ -124,7 +124,7 @@ h6.match:nth-child(1){
         
     }
     .team-logo {
-        height: 30px;
+        height: 32px;
         
     }
     .team-name {
