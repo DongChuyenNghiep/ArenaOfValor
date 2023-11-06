@@ -1,0 +1,134 @@
+
+.team-logo {
+    height: 70px;
+    
+}
+.team-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto;
+}
+
+body{
+    background-color: #1f2833;
+    color: white;
+    font: 17px;
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 70%;
+    margin: 10px auto 70px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+
+.team, .score-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+span.winner, span.loser {
+    display: inline-block;
+    width: 30px; /* Adjust the width as needed */
+    text-align: center; /* Optional: Center the text within the elements */
+
+    justify-content: space-between;
+  }
+.score-container {
+    text-align: center;
+    margin: auto; /* Center the score-container */
+}
+
+span.score {
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+span.score-left,span.score-right,span.gach{
+    font-size: 25px;
+}
+
+span.gach{
+    margin: 0 5px;
+}
+
+span.winner{
+    font-size: 25px;
+    font-weight: bolder;
+    color: aqua;
+    justify-content: center;
+}
+
+h6.match{
+    text-align: center;
+}
+h6.match:nth-child(1){
+    margin-top: 200px;
+}
+
+@media screen and (max-width:1399.98px) and (min-width:766px){
+    .row1{
+        display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 10px auto 70px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 0 25px;
+    }
+}
+
+@media screen and (max-width:765.98px){
+    .row1{
+        display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 95%;
+    margin: 10px auto 70px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 0 15px;
+    }
+    .score-container {
+        text-align: center;
+        margin: auto; /* Center the score-container */
+    }
+    
+    span.score {
+        font-weight: 700;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+    
+    span.score-left,span.score-right,span.gach{
+        font-size: 15px;
+    }
+    
+    span.gach{
+        margin: 0 5px;
+    }
+    
+    span.winner{
+        font-size: 15px;
+        font-weight: bolder;
+        color: aqua;
+        justify-content: center;
+        
+    }
+    .team-logo {
+        height: 30px;
+        
+    }
+    .team-name {
+        font-weight: bold;
+        font-size: 15px;
+    } 
+}
