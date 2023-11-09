@@ -1,14 +1,13 @@
-let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-let SHEET_TITLE = 'Vong_loai';
-let SHEET_RANGE_A = 'A4:G15';
 
-let FULL_URL_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A}`;
+let SHEET_RANGE_B = 'A25:G36';
 
-fetch(FULL_URL_A)
+let FULL_URL_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_B}`;
+
+fetch(FULL_URL_B)
   .then((res) => res.text())
   .then((rep) => {
     let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let dataBody = document.getElementById('data_body_A');
+    let dataBody = document.getElementById('table_fixture_B');
 
     for (let i = 0; i < data.table.rows.length; i++) {
       let rowData = data.table.rows[i].c;

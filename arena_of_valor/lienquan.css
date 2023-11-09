@@ -8,7 +8,68 @@
     font-size: 18px;
     margin: auto;
 }
+button.filter-table{
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin-right: 25px;
+    border: 1px white solid;
+    background-color: #212529;
+    color: white;
+    transition: 0.3s background-color;
+}
+button.filter-table:hover{
+    background-color: rgba(0, 255, 255, 0.762);
+    border: rgba(0, 255, 255, 0.762) 1px solid;
+}
+button.filter-table:focus{
+    background-color: rgba(0, 255, 255, 0.762);
+    border: rgba(0, 255, 255, 0.762) 1px solid;
+}
+table.my-table{
+    margin: 30px auto;
+    width: 95%;
+    text-align: center;
+    justify-content: center;
 
+}
+div.table_rank_A{
+    overflow-x: auto;
+    overflow-y: auto;
+}
+tr:nth-child(1),tr:nth-child(2){
+    border-left: 8px solid  rgba(0, 255, 255, 0.762) ;
+}
+tr:nth-child(3),tr:nth-child(4){
+    border-left: 8px solid rgb(220, 8, 8);
+    filter: brightness(50%);
+}
+tr.title{
+    border-left:  none;
+}
+td:nth-child(1){
+    text-align: right;
+    width: 8%;
+}
+td:nth-child(2){
+    text-align: left;
+    width: 17%;
+}
+td:nth-child(6){
+    width: 15%;
+}
+
+
+td,th{
+    border-bottom: 1px solid rgba(252, 252, 252, 0.334);
+}
+
+td,th,tr{
+    padding: 5px 0 5px 10px;
+
+}
+a.w3-bar-item{
+    color: black;
+}
 body{
     background-color: #212529;
     color: white;
@@ -19,7 +80,7 @@ body{
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    width: 70%;
+    width: 75%;
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
@@ -55,19 +116,21 @@ span.winner, span.loser {
 span.score {
     font-weight: 700;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 span.score-left,span.score-right,span.gach{
-    font-size: 25px;
+    font-size: 19px;
 }
 
 span.gach{
     margin: 0 5px;
 }
 
+
+
 span.winner{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bolder;
     color: aqua;
     justify-content: center;
@@ -77,32 +140,203 @@ h6.match{
     text-align: center;
 }
 h6.match:nth-child(1){
-    margin-top: 200px;
+    margin-top: 30px;
 }
 
-@media screen and (max-width:1399.98px) and (min-width:766px){
-    .row1{
-        display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    width: 90%;
-    margin: 10px auto 70px;
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
     border-radius: 10px;
-    justify-content: space-between;
-    padding: 5px 25px;
+    filter:brightness(10%)
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  a.custom-focus{
+    color: white !important;
+    padding: 40px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.195) !important;
+    filter: brightness(120%) !important;
+    border-right: 8px solid rgba(0, 255, 255, 0.762) !important;
+}
+  /* Handle on hover */
+
+@media screen and (min-width: 1400px) {
+    div.w3-container{
+        width: 82%;
+        margin-left: 18%;
+    }
+    #mySidebar{
+        width: 18%;
+        background-color: #212529;
+        
+    }
+
+    #mySidebar a{
+        color: white ;
+        padding: 50px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+        filter:brightness(50%)
+
+    }
+
+    .myLink:focus{
+        color: white !important;
+        padding: 40px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195) !important;
+        filter: brightness(120%) !important;
+        border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
+    }
+    
+    button.filter-table:focus{
+        background-color: rgba(0, 255, 255, 0.762) !important; 
+        border: rgba(0, 255, 255, 0.762) 1px solid !important;
+    }
+    .button-filter{
+        margin: 100px 0 0 200px;
+    }
+    .w3-teal{
+        margin-top: 80px;
+        color: black;
+        background-color: #212529 !important;
+    }
+ 
+}
+@media screen and (max-width:1399.98px) and (min-width:992px){
+    div.w3-container{
+        width: 82%;
+        margin-left: 18%;
+    }
+    #mySidebar{
+        width: 18%;
+        background-color: #212529;
+        
+    }
+
+    #mySidebar a{
+        color: white ;
+        padding: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+        filter:brightness(50%)
+
+    }
+
+    .myLink:focus{
+        color: white !important;
+        padding: 40px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195) !important;
+        filter: brightness(120%) !important;
+        border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
+    }
+    
+    button.filter-table:focus{
+        background-color: rgba(0, 255, 255, 0.762) !important; 
+        border: rgba(0, 255, 255, 0.762) 1px solid !important;
+    }
+    .w3-teal{
+        margin-top: 80px;
+        color: black;
+    }
+    div.w3-container{
+        width: 88%;
+
+    }
+    .button-filter{
+        margin: 100px 0 20px 140px;
+    }
+    
+
+    }
+    
+
+@media screen and (max-width:991.98px) and (min-width:765.98px){
+    .row1{
+
+    width: 95%;
+
+    
+    }
+    .w3-container{
+        margin: 0;
+    }
+    div.w3-teal{
+        margin-top: 80px;
+        color: black;
+        padding: 0;
+    }
+    button.w3-teal{
+        padding: 20px;
+    }
+    .button-filter{
+        margin: 50px 0 20px 20px;
+    }
+    .myLink:focus{
+        color: white !important;
+        padding: 40px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195) !important;
+        filter: brightness(120%) !important;
+        border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
+    }
+    
+    button.filter-table:focus{
+        background-color: rgba(0, 255, 255, 0.762) !important; 
+        border: rgba(0, 255, 255, 0.762) 1px solid !important;
+    }
+    button.w3-bar-item{
+        background-color: #212529;
+        padding: 40px !important;
+    }
+    #mySidebar a{
+        color: white ;
+        padding: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+        filter:brightness(50%);
+        background-color: #212529;
     }
 }
 
 @media screen and (max-width:765.98px){
+    button.w3-bar-item{
+        background-color: #212529;
+        padding: 25px !important;
+    }
+    .button-filter{
+        margin: 50px 0 20px 20px;
+    }
+    #mySidebar a{
+        color: white ;
+        padding: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+        filter:brightness(50%);
+        background-color: #212529;
+    }
+    .w3-container{
+        margin: 0;
+    }
+    div.w3-teal{
+        margin-top: 80px;
+        color: black;
+        padding: 0;
+    }
+    button.w3-teal{
+        padding: 20px;
+    }
+    .button-filter{
+        margin: 50px 0 20px 20px;
+    }
     .row1{
-        display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    width: 96%;
-    margin: 10px auto 70px;
-    border-radius: 10px;
-    justify-content: space-between;
-    padding: 7px 5px;
+    padding: 10px ;
+    width: 99%;
+
     }
     .score-container {
         text-align: center;
