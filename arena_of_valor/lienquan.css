@@ -92,11 +92,11 @@ body{
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    width: 75%;
+    width: 85%;
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 7px 20px;
 }
 .loser-darker{
     filter: brightness(60%);
@@ -132,7 +132,7 @@ span.score {
 }
 
 span.score-left,span.score-right,span.gach{
-    font-size: 19px;
+    font-size: 22px;
 }
 
 span.gach{
@@ -142,7 +142,7 @@ span.gach{
 
 
 span.winner{
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bolder;
     color: aqua;
     justify-content: center;
@@ -216,7 +216,7 @@ h6.match:nth-child(1){
         border: rgba(0, 255, 255, 0.762) 1px solid !important;
     }
     .button-filter{
-        padding: 70px 0 0 150px;
+        padding: 70px 0 20px 100px;
     }
     .w3-teal{
         padding-top: 80px;
@@ -265,7 +265,7 @@ h6.match:nth-child(1){
     }
 
     .button-filter{
-        padding: 120px 0 30px 120px;
+        padding: 120px 0 30px 70px;
     }
 
     }
