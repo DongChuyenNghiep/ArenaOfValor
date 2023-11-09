@@ -336,10 +336,13 @@ h6.match:nth-child(1){
         margin: 0;
     }
     div.w3-teal{
-        padding-top: 80px;
+        padding-top: 70px;
         color: black;
         width: 120%;
 
+    }
+    #mySidebar{
+        padding-top: 80px;
     }
     button.w3-teal{
         padding-top: 20px;
