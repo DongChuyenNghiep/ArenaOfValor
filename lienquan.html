@@ -43,20 +43,19 @@
 
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-        <a href="#groupA" class="w3-bar-item w3-button linkElement" id="myLink" onclick="showTable('A')">Link 1</a>
-        <a href="#groupB" class="w3-bar-item w3-button linkElement" onclick="showTable('B')">Link 2</a>
-        <a href="#groupC" class="w3-bar-item w3-button linkElement" onclick="showTable('C')" >Link 3</a>
-        <a href="#groupD" class="w3-bar-item w3-button linkElement" onclick="showTable('D')">Link 1</a>
-
-    </div>
-    <div id="groupA" class="groupA">
+        <a href="#groupA" class="w3-bar-item w3-button linkElements custom-focus" onclick="toggleDivs('groupA')">Link 1</a>
+        <a href="#groupB" class="w3-bar-item w3-button linkElements" onclick="toggleDivs('groupB')">Link 2</a>
+        <a href="#groupC" class="w3-bar-item w3-button linkElements" onclick="showTable('C')">Link 3</a>
+        <a href="#groupD" class="w3-bar-item w3-button linkElements" onclick="showTable('D')">Link 1</a>
+      </div>
+    <div id="groupA" class="group groupA">
         
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
         </div>
 
         <div class="w3-container">
-            
+
             <div class="button-filter">
                 <button class="filter-table" onclick="showTableA('fixture')" id="button_focus">Lịch thi đấu</button>
                 <button class="filter-table" onclick="showTableA('rank') " id="button_focus">Bảng xếp hạng</button>
@@ -78,6 +77,9 @@
                             <th scope="col" id="match">Trận</th>
                             <th scope="col" id="win">Thắng</th>
                             <th scope="col" id="lose">Thua</th>
+                            <th scope="col" id="win">Kill</th>
+                            <th scope="col" id="lose">Death</th>
+                            <th scope="col" id="win">Hiệu số</th>
                             <th scope="col" id="total-point">Điểm</th>
                         </tr>
                     </thead>
@@ -90,7 +92,7 @@
     </div>
 
     
-    <div id="groupB" class="groupB">
+    <div id="groupB" class="group groupB">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
         </div>
@@ -109,13 +111,17 @@
 
             <div class="table_rank_B">
 
-                <table class=" my-table table-bordered">
+                <table class="my-table">
                     <thead>
-                        <tr>
+                        <tr class="title">
+                            <th scope="col" id="logo"></th>
                             <th scope="col" id="lop">Lớp</th>
                             <th scope="col" id="match">Trận</th>
                             <th scope="col" id="win">Thắng</th>
                             <th scope="col" id="lose">Thua</th>
+                            <th scope="col" id="win">Kill</th>
+                            <th scope="col" id="lose">Death</th>
+                            <th scope="col" id="win">Hiệu số</th>
                             <th scope="col" id="total-point">Điểm</th>
                         </tr>
                     </thead>
@@ -129,7 +135,6 @@
 
     </div>
     <script src="arena_of_valor/sidebar.js"></script>
-    <script src="arena_of_valor/filter.js"></script>
     <script src="arena_of_valor/focus_link.js"></script>
     <script src="arena_of_valor/chooseA.js"></script>
     <script src="arena_of_valor/chooseB.js"></script>

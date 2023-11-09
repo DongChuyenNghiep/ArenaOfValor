@@ -32,6 +32,21 @@ table.my-table{
     justify-content: center;
 
 }
+.group {
+    display: none;
+  }
+
+  .groupA, .groupB {
+    display: none;
+  }
+
+  .visible {
+    display: block !important;
+  }
+
+th{
+    padding: 5px 0 15px 0;
+}
 div.table_rank_A{
     overflow-x: auto;
     overflow-y: auto;
@@ -54,16 +69,13 @@ td:nth-child(2){
     text-align: left;
     width: 17%;
 }
-td:nth-child(6){
-    width: 15%;
-}
 
 
 td,th{
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);
 }
 
-td,th,tr{
+td,tr{
     padding: 5px 0 5px 10px;
 
 }
@@ -178,6 +190,7 @@ h6.match:nth-child(1){
     #mySidebar{
         width: 18%;
         background-color: #212529;
+        padding-top: 80px;
         
     }
 
@@ -185,7 +198,8 @@ h6.match:nth-child(1){
         color: white ;
         padding: 50px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.195);
-        filter:brightness(50%)
+        filter:brightness(50%);
+        
 
     }
 
@@ -202,10 +216,10 @@ h6.match:nth-child(1){
         border: rgba(0, 255, 255, 0.762) 1px solid !important;
     }
     .button-filter{
-        margin: 100px 0 0 200px;
+        padding: 70px 0 0 150px;
     }
     .w3-teal{
-        margin-top: 80px;
+        padding-top: 80px;
         color: black;
         background-color: #212529 !important;
     }
@@ -219,7 +233,7 @@ h6.match:nth-child(1){
     #mySidebar{
         width: 18%;
         background-color: #212529;
-        
+        padding-top:80px ;
     }
 
     #mySidebar a{
@@ -243,17 +257,16 @@ h6.match:nth-child(1){
         border: rgba(0, 255, 255, 0.762) 1px solid !important;
     }
     .w3-teal{
-        margin-top: 80px;
-        color: black;
+        display: none;
     }
     div.w3-container{
         width: 88%;
 
     }
+
     .button-filter{
-        margin: 100px 0 20px 140px;
+        padding: 120px 0 30px 120px;
     }
-    
 
     }
     
@@ -277,7 +290,7 @@ h6.match:nth-child(1){
         padding: 20px;
     }
     .button-filter{
-        margin: 50px 0 20px 20px;
+        padding: 50px 0 20px 20px;
     }
     .myLink:focus{
         color: white !important;
@@ -310,7 +323,7 @@ h6.match:nth-child(1){
         padding: 25px !important;
     }
     .button-filter{
-        margin: 50px 0 20px 20px;
+        padding: 50px 0 20px 20px;
     }
     #mySidebar a{
         color: white ;
@@ -323,19 +336,24 @@ h6.match:nth-child(1){
         margin: 0;
     }
     div.w3-teal{
-        margin-top: 80px;
+        padding-top: 80px;
         color: black;
-        padding: 0;
+        width: 120%;
+
     }
     button.w3-teal{
-        padding: 20px;
+        padding-top: 20px;
     }
-    .button-filter{
-        margin: 50px 0 20px 20px;
+    table.my-table{
+        width: 120%;
     }
+    th#win{
+        width: 120px !important;
+    }
+
     .row1{
     padding: 10px ;
-    width: 99%;
+    width: 100%;
 
     }
     .score-container {

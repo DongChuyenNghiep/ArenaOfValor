@@ -1,6 +1,6 @@
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
 let SHEET_TITLE = 'Fixture-group stage';
-let SHEET_RANGE_A_1 = 'A3:F6';
+let SHEET_RANGE_A_1 = 'A3:I6';
 
 let FULL_URL_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 
@@ -18,6 +18,9 @@ let cell3 = document.createElement('td');
 let cell4 = document.createElement('td');
 let cell5 = document.createElement('td');
 let cell6 = document.createElement('td');
+let cell7 = document.createElement('td');
+let cell8 = document.createElement('td');
+let cell9 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
 let imageSrc = rowData[0].v;
@@ -31,6 +34,9 @@ cell3.textContent = rowData[2].v;
 cell4.textContent = rowData[3].v;
 cell5.textContent = rowData[4].v;
 cell6.textContent = rowData[5].v;
+cell7.textContent = rowData[6].v;
+cell8.textContent = rowData[7].v;
+cell9.textContent = rowData[8].v;
 
 row.appendChild(cell1);
 row.appendChild(cell2);
@@ -38,6 +44,9 @@ row.appendChild(cell3);
 row.appendChild(cell4);
 row.appendChild(cell5);
 row.appendChild(cell6);
+row.appendChild(cell7);
+row.appendChild(cell8);
+row.appendChild(cell9);
 
             dataBody.appendChild(row);
         }
