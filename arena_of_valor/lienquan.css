@@ -25,6 +25,7 @@ button.filter-table:focus{
     background-color: rgba(0, 255, 255, 0.762);
     border: rgba(0, 255, 255, 0.762) 1px solid;
 }
+
 table.my-table{
     margin: 30px auto;
     width: 95%;
