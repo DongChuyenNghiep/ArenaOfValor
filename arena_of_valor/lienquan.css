@@ -12,20 +12,29 @@ button.filter-table{
     padding: 12px 18px;
     border-radius: 4px;
     margin-right: 25px;
-    border: 1px white solid;
+    border: 1px #212529 solid;
     background-color: #212529;
     color: white;
     transition: 0.3s background-color;
 }
-button.filter-table:hover{
-    background-color: rgba(0, 255, 255, 0.762);
-    border: rgba(0, 255, 255, 0.762) 1px solid;
-}
-button.filter-table:focus{
-    background-color: rgba(0, 255, 255, 0.762);
-    border: rgba(0, 255, 255, 0.762) 1px solid;
+button.filter-table {
+    position: relative;
 }
 
+button.filter-table::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* Adjust the height of the border as needed */
+    background-color: rgba(0, 255, 255, 0.762);
+    transition: width 0.3s ease; /* Adjust the duration and timing function as needed */
+}
+
+button.filter-table:hover::after {
+    width: 100%;
+}
 table.my-table{
     margin: 30px auto;
     width: 95%;
@@ -181,6 +190,12 @@ h6.match:nth-child(1){
     filter: brightness(120%) !important;
     border-right: 8px solid rgba(0, 255, 255, 0.762) !important;
 }
+h3{
+    text-align: center;
+    font-weight: bold !important;
+    font-size: 28px !important;
+    padding-bottom: 10px;
+}
   /* Handle on hover */
 
 @media screen and (min-width: 1400px) {
@@ -194,7 +209,7 @@ h6.match:nth-child(1){
         padding-top: 80px;
         
     }
-
+    
     #mySidebar a{
         color: white ;
         padding: 50px;
@@ -212,12 +227,9 @@ h6.match:nth-child(1){
         border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
     }
     
-    button.filter-table:focus{
-        background-color: rgba(0, 255, 255, 0.762) !important; 
-        border: rgba(0, 255, 255, 0.762) 1px solid !important;
-    }
+
     .button-filter{
-        padding: 70px 0 20px 100px;
+        padding: 50px 0 20px 80px;
     }
     .w3-teal{
         padding-top: 80px;
@@ -253,10 +265,7 @@ h6.match:nth-child(1){
         border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
     }
     
-    button.filter-table:focus{
-        background-color: rgba(0, 255, 255, 0.762) !important; 
-        border: rgba(0, 255, 255, 0.762) 1px solid !important;
-    }
+
     .w3-teal{
         display: none;
     }
@@ -273,6 +282,9 @@ h6.match:nth-child(1){
     
 
 @media screen and (max-width:991.98px) and (min-width:765.98px){
+    h3{
+        font-size: 25px !important;
+    }
     .row1{
 
     width: 95%;
@@ -301,10 +313,7 @@ h6.match:nth-child(1){
         border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
     }
     
-    button.filter-table:focus{
-        background-color: rgba(0, 255, 255, 0.762) !important; 
-        border: rgba(0, 255, 255, 0.762) 1px solid !important;
-    }
+
     button.w3-bar-item{
         background-color: #212529;
         padding: 40px !important;
@@ -316,9 +325,15 @@ h6.match:nth-child(1){
         filter:brightness(50%);
         background-color: #212529;
     }
+    h3{
+        font-size: 25px !important;
+    }
 }
 
 @media screen and (max-width:765.98px){
+    h3{
+        font-size: 22px !important;
+    }
     button.w3-bar-item{
         background-color: #212529;
         padding: 25px !important;
@@ -368,7 +383,7 @@ h6.match:nth-child(1){
     span.score {
         font-weight: 700;
         border-radius: 5px;
-        font-size: 17px;
+        font-size: 16px;
     }
     
     span.score-left,span.score-right,span.gach{
@@ -388,10 +403,11 @@ h6.match:nth-child(1){
     }
     .team-logo {
         height: 32px;
+        padding: 0px 5px;
         
     }
     .team-name {
         font-weight: bold;
-        font-size: 15px;
+        font-size: 14px;
     } 
 }
