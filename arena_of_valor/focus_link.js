@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add the "custom-focus" class to the clicked link
     link.classList.add("custom-focus");
-
+    
     // Toggle the visibility of the corresponding div based on the clicked link
     groupDivs.forEach((div) => {
       div.classList.remove("visible");
