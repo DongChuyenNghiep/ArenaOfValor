@@ -168,87 +168,99 @@ fetch(FULL_URL_A)
           score_final.textContent = valueL[i];
 
         }
-        //document.getElementById('winner1').textContent = valueC1;
-        //document.getElementById('winner2').textContent = valueC2;
-        //document.getElementById('winner3').textContent = valueC3;
-       // document.getElementById('winner4').textContent = valueC4;
 
-        //document.getElementById('score-winner1').textContent = valueD1;
-        //document.getElementById('score-winner2').textContent = valueD2;
-        //document.getElementById('score-winner3').textContent = valueD3;
-        //document.getElementById('score-winner4').textContent = valueD4;
 
-        //document.getElementById('winner-champ1').textContent = valueE1;
-        //document.getElementById('winner-champ2').textContent = valueE2;
-        //document.getElementById('score-champ1').textContent = valueF1;
-        //document.getElementById('score-champ2').textContent = valueF2;
-
-        //var participantDiv1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score1').parentNode;
-        //var participantDiv2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score2').parentNode;
-        //var participantDiv3 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score3').parentNode;
-        //var participantDiv4 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score4').parentNode;
-        //var participantDiv5 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score5').parentNode;
-        //var participantDiv6 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score6').parentNode;
-        //var participantDiv7 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score7').parentNode;
-        //var participantDiv8 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score8').parentNode;
-
-        //var participantwinner1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-winner1').parentNode;
-        //var participantwinner2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-winner2').parentNode;
-        //var participantwinner3 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-winner3').parentNode;
-        //var participantwinner4 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-winner4').parentNode;
+        var participantDiv1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score1').parentNode;
+        var participantDiv2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score2').parentNode;
+        var participantDiv3 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score3').parentNode;
+        var participantDiv4 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score4').parentNode;
+        var participantDiv5 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score5').parentNode;
+        var participantDiv6 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score6').parentNode;
+        var participantDiv7 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score7').parentNode;
+        var participantDiv8 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score8').parentNode;
+        var participantDiv9 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score9').parentNode;
+        var participantDiv10 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score10').parentNode;
+        var participantDiv11 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score11').parentNode;
+        var participantDiv12 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score12').parentNode;
+        var participantDiv13 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score13').parentNode;
+        var participantDiv14 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score14').parentNode;
+        var participantDiv15 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score15').parentNode;
+        var participantDiv16 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score16').parentNode;
+    
         
-        //var champion1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #winner-champ1').parentNode;
-        //var champion2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #winner-champ2').parentNode;
-        // Check if score1 is greater than score2
-        //if (valueB1 > valueB2) {
+        
+        //Check if score1 is greater than score2
+        if (valueC[0] > valueC[1]) {
           // Add the 'winner' class to the first div.participant
-          //participantDiv1.classList.add('winner');
-        //} else {
+          participantDiv1.classList.add('winner');
+          participantDiv2.classList.add('loser');
+        } else {
           // Add the 'winner' class to the second div.participant
-          //participantDiv2.classList.add('winner');
-        //}
-        //if (valueB3 > valueB4) {
+          participantDiv2.classList.add('winner');
+          participantDiv1.classList.add('loser');
+        }
+        if (valueC[2] > valueC[3]) {
             // Add the 'winner' class to the first div.participant
-            //participantDiv3.classList.add('winner');
-         // } else {
+            participantDiv3.classList.add('winner');
+            participantDiv4.classList.add('loser');
+          } else {
             // Add the 'winner' class to the second div.participant
-          //  participantDiv4.classList.add('winner');
-          //}
-          //if (valueB5 > valueB6) {
+            participantDiv4.classList.add('winner');
+            participantDiv3.classList.add('loser');
+          }
+          if (valueC[4] > valueC[5]) {
             // Add the 'winner' class to the first div.participant
-          //  participantDiv5.classList.add('winner');
-         // } else {
+            participantDiv5.classList.add('winner');
+            participantDiv6.classList.add('loser');
+          } else {
             // Add the 'winner' class to the second div.participant
-          //  participantDiv6.classList.add('winner');
-          //}
-          //if (valueB7 > valueB8) {
+            participantDiv6.classList.add('winner');
+            participantDiv5.classList.add('loser');
+          }
+          if (valueC[6] > valueC[7]) {
             // Add the 'winner' class to the first div.participant
-          //  participantDiv7.classList.add('winner');
-          //} else {
+            participantDiv7.classList.add('winner');
+            participantDiv8.classList.add('loser');
+          } else {
             // Add the 'winner' class to the second div.participant
-          //  participantDiv8.classList.add('winner');
-          //}
+            participantDiv7.classList.add('loser');
+            participantDiv8.classList.add('winner');
+          }
 
-          //if (valueD1 > valueD2) {
+          if (valueC[8] > valueC[9]) {
             // Add the 'winner' class to the first div.participant
-          //  participantwinner1.classList.add('winner');
-          //} else {
+            participantDiv9.classList.add('winner');
+            participantDiv10.classList.add('loser');
+          } else {
             // Add the 'winner' class to the second div.participant
-          ///  participantwinner2.classList.add('winner');
-          //}
-          //if (valueD3 > valueD4) {
+            participantDiv9.classList.add('loser');
+            participantDiv10.classList.add('winner');
+          }
+          if (valueC[10] > valueC[11]) {
             // Add the 'winner' class to the first div.participant
-           // participantwinner3.classList.add('winner');
-          //} else {
+            participantDiv11.classList.add('winner');
+            participantDiv12.classList.add('loser');
+          } else {
             // Add the 'winner' class to the second div.participant
-          //  participantwinner4.classList.add('winner');
-         // }
-          //if(valueF1>valueF2){
-          //  champion1.classList.add('winner');
-          //}else {
+            participantDiv11.classList.add('loser');
+            participantDiv12.classList.add('winner');
+          }
+          if(valueC[12] > valueC[13]){
+            participantDiv13.classList.add('winner');
+            participantDiv14.classList.add('loser');
+          }else {
             // Add the 'winner' class to the second div.participant
-           // champion2.classList.add('winner');
-         // }
+            participantDiv13.classList.add('loser');
+            participantDiv14.classList.add('winner');
+          }
+          if(valueC[14] > valueC[15]){
+            participantDiv15.classList.add('winner');
+            participantDiv16.classList.add('loser');
+          }else {
+            // Add the 'winner' class to the second div.participant
+            participantDiv15.classList.add('loser');
+            participantDiv16.classList.add('winner');
+          }
 
     })
     
