@@ -68,7 +68,7 @@ body{
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.loser .score{
   color: white;
-  filter: brightness(90%) !important;
+  filter: brightness(100%) !important;
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant:not(:last-child) {
   border-bottom: thin solid #212529;
