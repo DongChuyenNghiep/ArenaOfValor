@@ -17,12 +17,41 @@ body{
   height: 30px;
   padding-left: 10px;
 }
+
+div.cac-vong{
+  padding: 120px 0px 0 50px;
+}
+div.cac-vong li{
+  list-style: none;
+  display: inline-flex;
+  margin-right: 50px;
+  position: relative;
+}
+div.cac-vong a{
+  color: white !important;
+  text-decoration: none !important;
+  padding-bottom: 8px !important;
+}
+div.cac-vong a::after{
+  content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* Adjust the height of the border as needed */
+    background-color: rgba(0, 255, 255, 0.762);
+    transition: width 0.3s ease; /* Adjust the duration and timing function as needed */
+
+}
+div.cac-vong a:hover::after{
+  width: 100%;
+}
 .bracket {
   display: inline-block;
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  padding:100px 30px;
+  padding: 20px 0px 60px 60px;
 }
 
 .bracket .round {
