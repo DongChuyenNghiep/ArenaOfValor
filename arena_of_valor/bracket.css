@@ -53,8 +53,8 @@ img{
 }
 
 .bracket .round .winners>div.matchups .matchup .participants .participant.loser {
-  color: #dc563f;
-  border-color: #dc563f;
+  filter: brightness(70%);
+
 }
 
 .bracket .round .winners>div.matchups .matchup .participants .participant:not(:last-child) {

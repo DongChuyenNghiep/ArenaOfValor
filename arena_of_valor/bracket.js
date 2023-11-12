@@ -121,20 +121,20 @@ fetch(FULL_URL_A)
         let valueG = [
           jsonData.table.rows[0].c[6].v,
           jsonData.table.rows[4].c[6].v,
-          jsonData.table.rows[4].c[6].v,
           jsonData.table.rows[8].c[6].v,
+          jsonData.table.rows[12].c[6].v,
         ];
         let valueH = [
           jsonData.table.rows[0].c[7].v,
           jsonData.table.rows[4].c[7].v,
-          jsonData.table.rows[4].c[7].v,
           jsonData.table.rows[8].c[7].v,
+          jsonData.table.rows[12].c[7].v,
         ];
         let valueI = [
           jsonData.table.rows[0].c[8].v,
           jsonData.table.rows[4].c[8].v,
-          jsonData.table.rows[4].c[8].v,
           jsonData.table.rows[8].c[8].v,
+          jsonData.table.rows[12].c[8].v,
         ];
 
         for (let j = 0; j < 4; j++) {
@@ -261,6 +261,75 @@ fetch(FULL_URL_A)
             participantDiv15.classList.add('loser');
             participantDiv16.classList.add('winner');
           }
+        var participantQuater1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-1').parentNode;
+        var participantQuater2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-2').parentNode;
+        var participantQuater3 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-3').parentNode;
+        var participantQuater4 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-4').parentNode;
+        var participantQuater5 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-5').parentNode;
+        var participantQuater6 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-6').parentNode;
+        var participantQuater7 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-7').parentNode;
+        var participantQuater8 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #quarter-score-8').parentNode;
 
+          if(valueF[0]>valueF[1]){
+            participantQuater1.classList.add('winner')
+            participantQuater2.classList.add('loser')
+          }
+          else{
+            participantQuater1.classList.add('loser')
+            participantQuater2.classList.add('winner')
+          }
+          if(valueF[2]>valueF[3]){
+            participantQuater3.classList.add('winner')
+            participantQuater4.classList.add('loser')
+          }
+          else{
+            participantQuater3.classList.add('loser')
+            participantQuater4.classList.add('winner')
+          }
+          if(valueF[4]>valueF[5]){
+            participantQuater5.classList.add('winner')
+            participantQuater6.classList.add('loser')
+          }
+          else{
+            participantQuater5.classList.add('loser')
+            participantQuater6.classList.add('winner')
+          }
+          if(valueF[6]>valueF[7]){
+            participantQuater7.classList.add('winner')
+            participantQuater8.classList.add('loser')
+          }
+          else{
+            participantQuater7.classList.add('loser')
+            participantQuater8.classList.add('winner')
+          }
+        var participantSemi1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #semi-score-1').parentNode;
+        var participantSemi2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #semi-score-2').parentNode;
+        var participantSemi3 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #semi-score-3').parentNode;
+        var participantSemi4 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #semi-score-4').parentNode;
+        if (valueI[0]>valueI[1]){
+          participantSemi1.classList.add('winner');
+          participantSemi2.classList.add('loser');
+        }
+        else{
+          participantSemi1.classList.add('loser');
+          participantSemi2.classList.add('winner');
+        }
+        if (valueI[2]>valueI[3]){
+          participantSemi3.classList.add('winner');
+          participantSemi4.classList.add('loser');
+        }
+        else{
+          participantSemi3.classList.add('loser');
+          participantSemi4.classList.add('winner');
+        }
+        var participantFinal1 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-champ-1').parentNode;
+        var participantFinal2 = document.querySelector('.bracket .round .winners > div.matchups .matchup .participants .participant #score-champ-2').parentNode;
+        if (valueL[0] > valueL[1]){
+          participantFinal1.classList.add('winner');
+          participantFinal2.classList.add('loser');
+        }else{
+          participantFinal1.classList.add('loser');
+          participantFinal2.classList.add('winner');
+        }
     })
     
