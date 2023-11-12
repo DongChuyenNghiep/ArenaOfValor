@@ -17,23 +17,38 @@ button.filter-table{
     color: white;
     transition: 0.3s background-color;
 }
+
+  div.cac-vong a{
+    color: white !important;
+    text-decoration: none !important;
+    padding-bottom: 8px !important;
+  }
+  div.cac-vong a::after{
+    content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px; /* Adjust the height of the border as needed */
+      background-color: rgba(0, 255, 255, 0.762);
+      transition: width 0.3s ease; /* Adjust the duration and timing function as needed */
+  
+  }
+  div.cac-vong a:hover::after{
+    width: 100%;
+  }
 button.filter-table {
     position: relative;
 }
 
-button.filter-table::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px; /* Adjust the height of the border as needed */
-    background-color: rgba(0, 255, 255, 0.762);
-    transition: width 0.3s ease; /* Adjust the duration and timing function as needed */
-}
+button.filter-table {
+    padding: 12px 18px;
+    border: 1px solid white;
+    transition: 0.3s background-color;
 
-button.filter-table:hover::after {
-    width: 100%;
+}
+button.filter-table:hover {
+    background-color: rgb(62, 192, 192);
 }
 table.my-table{
     margin: 30px auto;
@@ -209,6 +224,15 @@ h3{
         padding-top: 80px;
         
     }
+    div.cac-vong{
+        padding: 40px 0px 0 345px;
+      }
+      div.cac-vong li{
+        list-style: none;
+        display: inline-flex;
+        margin-right: 50px;
+        position: relative;
+      }
     
     #mySidebar a{
         color: white ;
@@ -229,7 +253,7 @@ h3{
     
 
     .button-filter{
-        padding: 50px 0 20px 80px;
+        padding: 30px 0 20px 80px;
     }
     .w3-teal{
         padding-top: 80px;
@@ -256,7 +280,15 @@ h3{
         filter:brightness(50%)
 
     }
-
+    div.cac-vong{
+        padding: 120px 0px 0 300px;
+      }
+      div.cac-vong li{
+        list-style: none;
+        display: inline-flex;
+        margin-right: 30px;
+        position: relative;
+      }
     .myLink:focus{
         color: white !important;
         padding: 40px !important;
@@ -275,7 +307,7 @@ h3{
     }
 
     .button-filter{
-        padding: 120px 0 30px 70px;
+        padding: 10px 0 30px 70px;
     }
 
     }
@@ -291,6 +323,15 @@ h3{
 
     
     }
+    div.cac-vong{
+        padding: 40px 0px 0 15px;
+      }
+      div.cac-vong li{
+        list-style: none;
+        display: inline-flex;
+        margin-right: 30px;
+        position: relative;
+      }
     .w3-container{
         margin: 0;
     }
@@ -303,7 +344,7 @@ h3{
         padding: 20px;
     }
     .button-filter{
-        padding: 50px 0 20px 20px;
+        padding: 30px 0 20px 20px;
     }
     .myLink:focus{
         color: white !important;
@@ -339,7 +380,10 @@ h3{
         padding: 25px !important;
     }
     .button-filter{
-        padding: 50px 0 20px 20px;
+        padding: 10px 0 0px 20px;
+    }
+    button.filter-table{
+        margin-top: 10px;
     }
     #mySidebar a{
         color: white ;
@@ -369,10 +413,18 @@ h3{
     th#win{
         width: 120px !important;
     }
-
+    div.cac-vong{
+        padding: 40px 0px 0 15px;
+      }
+      div.cac-vong li{
+        list-style: none;
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+      }
     .row1{
     padding: 10px ;
-    width: 100%;
+    width: 110%;
 
     }
     .score-container {
