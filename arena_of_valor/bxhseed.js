@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_TABLE = 'B141:J178';
+let SHEET_RANGE_TABLE = 'B146:J183';
 
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID_1}/gviz/tq?sheet=${SHEET_TITLE_DAY_1}&range=${SHEET_RANGE_TABLE}`;
 
