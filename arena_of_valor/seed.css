@@ -403,6 +403,7 @@ h3{
     }
     #mySidebar{
         background-color: #212529;
+        padding: 0px;
     }
     #mySidebar a{
         color: white ;
@@ -420,9 +421,10 @@ h3{
         width: 100%;
 
     }
-    #mySidebar{
-        padding-top: 80px;
+    div.w3-teal{
+        margin-top: 75px;
     }
+
     button.w3-teal{
         padding-top: 20px;
     }
@@ -483,4 +485,9 @@ h3{
     } 
 
    
+}
+@media screen and (max-width:360.98px){
+    div.w3-teal{
+        margin-top: 115px;
+    }
 }
