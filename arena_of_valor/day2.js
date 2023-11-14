@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_DAY_2 = 'B59:H76';
+let SHEET_RANGE_DAY_2 = 'B60:H78';
 
 let FULL_URL_2 = `https://docs.google.com/spreadsheets/d/${SHEET_ID_1}/gviz/tq?sheet=${SHEET_TITLE_DAY_1}&range=${SHEET_RANGE_DAY_2}`;
 
