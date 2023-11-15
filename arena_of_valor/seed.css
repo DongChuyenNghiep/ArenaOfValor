@@ -222,7 +222,7 @@ h3{
     font-weight: bold !important;
     font-size: 28px !important;
     padding-bottom: 10px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
   /* Handle on hover */
 
@@ -416,23 +416,25 @@ h3{
         margin: 0;
     }
     div.groupD div.w3-teal{
-        padding-top: 70px;
         color: black;
         width: 100%;
-
     }
     div.w3-teal{
-        margin-top: 75px;
+        margin-top: 80px;
     }
 
     button.w3-teal{
-        padding-top: 20px;
+        padding-top: 10px;
     }
     table.my-table{
-        width: 100%;
+        width: 150%;
     }
-    th#win{
-        width: 120px !important;
+    th,td{
+        padding: 15px 20px;
+   
+    }
+    td:first-child{
+        padding: 1px;
     }
     div.cac-vong{
         padding: 40px 0px 0 15px;
