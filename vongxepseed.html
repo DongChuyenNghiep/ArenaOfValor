@@ -45,12 +45,10 @@
     
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-        <a href="#day1" class="w3-bar-item w3-button linkElements custom-focus" onclick="toggleDivs('groupA')">NGÀY 1</a>
-        <a href="#day2" class="w3-bar-item w3-button linkElements" onclick="toggleDivs('groupB')">NGÀY 2</a>
-        <a href="#day3" class="w3-bar-item w3-button linkElements" onclick="toggleDivs('groupC')">NGÀY 3</a>
-        <a href="#bxh" class="w3-bar-item w3-button linkElements" onclick="toggleDivs('groupD')">BẢNG XẾP HẠNG</a>
-
-
+        <a href="#day1" class="w3-bar-item w3-button linkElements custom-focus">NGÀY 1</a>
+        <a href="#day2" class="w3-bar-item w3-button linkElements">NGÀY 2</a>
+        <a href="#day3" class="w3-bar-item w3-button linkElements">NGÀY 3</a>
+        <a href="#bxh" class="w3-bar-item w3-button linkElements">BẢNG XẾP HẠNG</a>
       </div>
       
     <!--Phan A-->
@@ -119,6 +117,7 @@
                 <table class="my-table">
                     <thead>
                         <tr class="title">
+                            <th scope="col" id="rank">Rank</th>
                             <th scope="col" id="logo"></th>
                             <th scope="col" id="lop">Lớp</th>
                             <th scope="col" id="match">Trận</th>

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Retrieve the last visited page from localStorage
   const lastVisitedPage = localStorage.getItem("lastVisitedPage");
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add the "custom-focus" class to the clicked link
     link.classList.add("custom-focus");
-    
+
     // Toggle the visibility of the corresponding div based on the clicked link
     groupDivs.forEach((div) => {
       div.classList.remove("visible");
@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Event listener for link clicks
   linkElements.forEach((link) => {
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default link behavior
       toggleDivs(link);
     });
   });

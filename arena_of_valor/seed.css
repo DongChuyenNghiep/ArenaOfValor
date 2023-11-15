@@ -57,6 +57,9 @@ table.my-table{
     justify-content: center;
 
 }
+th#lop{
+    text-align: left;
+}
 .group {
     display: none;
   }
@@ -93,14 +96,17 @@ tr:nth-child(25),tr:nth-child(26),tr:nth-child(27),tr:nth-child(28),tr:nth-child
     border-left: rgb(62, 192, 192) 5px solid;
 
 }
+tr:nth-child(31),tr:nth-child(32),tr:nth-child(33),tr:nth-child(34),tr:nth-child(35),tr:nth-child(36),tr:nth-child(37),tr:nth-child(38){
+    border-left: rgb(243, 100, 100) 5px solid;
+}
 tr.title{
     border-left:  none;
 }
-td:nth-child(1){
+td:nth-child(2){
     text-align: right;
     width: 8%;
 }
-td:nth-child(2){
+td:nth-child(3){
     text-align: left;
     width: 17%;
 }
@@ -427,11 +433,15 @@ h3{
         padding-top: 10px;
     }
     table.my-table{
-        width: 150%;
+        width: 250%;
     }
     th,td{
-        padding: 15px 20px;
+        padding: 20px 22px;
+
    
+    }
+    td:nth-child(2){
+        padding: 0;
     }
     td:first-child{
         padding: 1px;
@@ -477,7 +487,7 @@ h3{
         
     }
     .team-logo {
-        height: 32px;
+        height: 35px;
         padding: 0px 5px;
         
     }
