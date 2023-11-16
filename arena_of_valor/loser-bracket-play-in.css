@@ -51,10 +51,14 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  margin: 700px 0px 0px 60px;
+  margin: 850px 0px 0px 0px;
   padding-bottom: 50px;
+  padding-left: 60px;
 }
-
+h2{
+  text-align: center;
+  padding-bottom: 40px;
+}
 .loser-bracket .round {
   display: inline-block;
   vertical-align: middle;
@@ -148,16 +152,21 @@ div.cac-vong a:hover::after{
   border-color: #60c645;
 }
 
-.loser-bracket .round .winners>div.connector .line,
-.loser-bracket .round .winners>div.connector .merger {
+.loser-bracket .round .winners>div.connector .line
+{
   box-sizing: border-box;
-  width: 70px;
+  width: 80px;
   display: inline-block;
   vertical-align: top;
 }
-
+.loser-bracket .round .winners>div.connector .merger {
+  box-sizing: border-box;
+  width: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
 .loser-bracket .round .winners>div.connector .line {
-  border-bottom: thin solid rgb(103, 100, 100);
+  border-bottom: thin solid #212529;
   height: 64px;
 }
 
@@ -171,10 +180,10 @@ div.cac-vong a:hover::after{
   content: "";
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: 0%;
   height: 50%;
   border: 0 solid;
-  border-color: rgb(103, 100, 100);
+  border-color: #212529;
 }
 
 .loser-bracket .round .winners>div.connector .merger:before {

@@ -14,10 +14,29 @@ body{
   background-color: #212529 !important;
 }
 .winner-bracket img{
-  height: 30px;
+  width: 40px;
+
   padding-left: 10px;
 }
 
+div.cac-vong-thi-dau li:first-child{
+  margin-left: 30px;
+}
+div.cac-vong-thi-dau li{
+  list-style: none;
+  display: inline;
+  color: white;
+  width: 290px;
+  border: 1px white solid;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: black;
+  margin-right: 280px;
+
+}
+div.cac-vong-thi-dau li:last-child{
+  margin-right: 0;
+}
 div.cac-vong{
   padding: 20px 0px 0 50px;
 }
@@ -51,7 +70,8 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  padding: 20px 0px 60px 60px;
+  padding: 20px 0px 30px 60px;
+  width: 100%;
 }
 
 .winner-bracket .round {
@@ -159,13 +179,13 @@ div.cac-vong a:hover::after{
 .winner-bracket .round .winners>div.connector .line,
 .winner-bracket .round .winners>div.connector .merger {
   box-sizing: border-box;
-  width: 140px;
+  width: 60px;
   display: inline-block;
   vertical-align: top;
 }
 
 .winner-bracket .round .winners>div.connector .line {
-  border-bottom: thin solid rgb(103, 100, 100);
+  border-bottom: thin solid #212529;
   height: 64px;
 }
 
@@ -182,7 +202,7 @@ div.cac-vong a:hover::after{
   width: 100%;
   height: 50%;
   border: 0 solid;
-  border-color: rgb(103, 100, 100);
+  border-color: #212529;
 }
 
 .winner-bracket .round .winners>div.connector .merger:before {
@@ -198,27 +218,30 @@ div.cac-vong a:hover::after{
 
 
 .winner-bracket .round.quarterfinals .winners:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 70px;
 }
 
 .winner-bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 
 .winner-bracket .round.quarterfinals .winners .connector .merger {
-  height: 130px;
+  height: 180px;
+  margin-top: 25px;
 }
 .winner-bracket .round.quarterfinals .winners .connector .line {
-  height: 65px;
+  height: 107.5px;
 }
 
 
 .winner-bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
-  margin-bottom: 170px;
+  margin-bottom: 245px;
 }
-
+.under{
+  margin-bottom: 15px;
+}
 .winner-bracket .round.semifinals .winners .connector .merger {
-  height: 266px;
+  height: 220px;
 }
 
 .winner-bracket .round.semifinals .winners .connector .line {
@@ -242,5 +265,10 @@ div.cac-vong a:hover::after{
 @media screen and (max-width:767.98px) {
   ul.category{
     width: 250px;
+  }
+  h2{
+    text-align: left !important;
+    font-size: 25px !important;
+    padding-bottom: 10px !important;
   }
 }
