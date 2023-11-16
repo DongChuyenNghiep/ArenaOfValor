@@ -140,7 +140,7 @@ body{
     padding: 7px 20px;
 }
 .loser-darker{
-    filter: brightness(60%);
+    filter: brightness(35%);
 }
 
 .winner-brighter{
