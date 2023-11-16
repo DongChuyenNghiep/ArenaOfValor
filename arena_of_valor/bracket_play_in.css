@@ -263,9 +263,6 @@ div.cac-vong a:hover::after{
 
 }
 @media screen and (max-width:767.98px) {
-  ul.category{
-    width: 250px;
-  }
   h2{
     text-align: left !important;
     font-size: 25px !important;
