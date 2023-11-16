@@ -71,7 +71,7 @@ div.cac-vong a:hover::after{
   white-space: nowrap;
   font-size: 0;
   padding: 20px 0px 30px 60px;
-  width: 100%;
+
 }
 
 .winner-bracket .round {
@@ -267,5 +267,8 @@ div.cac-vong a:hover::after{
     text-align: left !important;
     font-size: 25px !important;
     padding-bottom: 10px !important;
+  }
+  ul{
+    width: 230px
   }
 }
