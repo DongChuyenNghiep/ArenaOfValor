@@ -6,171 +6,51 @@
   <meta name="google-adsense-account" content="ca-pub-8943279217968567">
   <title>Document</title>
   <link rel="stylesheet" href="arena_of_valor/bracket.css">
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-  <div class="bracket" style="overflow-x: auto;">
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <a href="#day1" class="w3-bar-item w3-button linkElements custom-focus">NGÀY 1</a>
+        <a href="#day2" class="w3-bar-item w3-button linkElements">NGÀY 2</a>
+        <a href="#day3" class="w3-bar-item w3-button linkElements">NGÀY 3</a>
+        <a href="#bxh" class="w3-bar-item w3-button linkElements">BẢNG XẾP HẠNG</a>
+    </div>
     
-    <section class="round round-16">
-        <div class="winners">
-            <div class="matchups">
-              <div class="matchup">
-                  <div class="participants">
-                      <div class="participant"><img id="teamImage1" src="" ><span id="team1"></span><span id="score1"></span></div>
-                      <div class="participant"><img id="teamImage2" src="" ><span id="team2"></span><span id="score2"></span></div>
-                  </div>
-              </div>
-              <div class="matchup">
-                  <div class="participants">
-                      <div class="participant"><img id="teamImage3" src="" ><span id="team3"></span><span id="score3"></span></div>
-                      <div class="participant"><img id="teamImage4" src="" ><span id="team4"></span><span id="score4"></span></div>
-                  </div>
-              </div>
-          </div>
-          <div class="connector">
-              <div class="merger"></div>
-              <div class="line"></div>
-          </div>
-          </div>
-          <div class="winners">
-              <div class="matchups">
-                  <div class="matchup">
-                      <div class="participants">
-                          <div class="participant"><img id="teamImage5" src="" ><span id="team5"></span><span id="score5"></span></div>
-                          <div class="participant"><img id="teamImage6" src="" ><span id="team6"></span><span id="score6"></span></div>
-                      </div>
-                  </div>
-                  <div class="matchup">
-                      <div class="participants">
-                          <div class="participant"><img id="teamImage7" src="" ><span id="team7"></span><span id="score7"></span></div>
-                          <div class="participant"><img id="teamImage8" src="" ><span id="team8"></span><span id="score8"></span></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="connector">
-                  <div class="merger"></div>
-                  <div class="line"></div>
-              </div>
-          </div>
-          <div class="winners">
-            <div class="matchups">
-              <div class="matchup">
-                  <div class="participants">
-                      <div class="participant"><img id="teamImage9" src="" ><span id="team9"></span><span id="score9"></span></div>
-                      <div class="participant"><img id="teamImage10" src="" ><span id="team10"></span><span id="score10"></span></div>
-                  </div>
-              </div>
-              <div class="matchup">
-                  <div class="participants">
-                      <div class="participant"><img id="teamImage11" src="" ><span id="team11"></span><span id="score11"></span></div>
-                      <div class="participant"><img id="teamImage12" src="" ><span id="team12"></span><span id="score12"></span></div>
-                  </div>
-              </div>
-          </div>
-          <div class="connector">
-              <div class="merger"></div>
-              <div class="line"></div>
-          </div>
-          </div>
-          <div class="winners">
-              <div class="matchups">
-                  <div class="matchup">
-                      <div class="participants">
-                          <div class="participant"><img id="teamImage13" src="" ><span id="team13"></span><span id="score13"></span></div>
-                          <div class="participant"><img id="teamImage14" src="" ><span id="team14"></span><span id="score14"></span></div>
-                      </div>
-                  </div>
-                  <div class="matchup">
-                      <div class="participants">
-                          <div class="participant"><img id="teamImage15" src="" ><span id="team15"></span><span id="score15"></span></div>
-                          <div class="participant"><img id="teamImage16" src="" ><span id="team16"></span><span id="score16"></span></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="connector">
-                  <div class="merger"></div>
-                  <div class="line"></div>
-              </div>
-          </div>
-    </section>
-    <section class="round quarterfinals">
-        <div class="winners">
-          <div class="matchups">
-            <div class="matchup">
-                <div class="participants">
-                    <div class="participant"><img id="teamQuater1" src="" ><span id="team-quarter-1"></span><span id="quarter-score-1"></span></div>
-                    <div class="participant"><img id="teamQuater2" src="" ><span id="team-quarter-2"></span><span id="quarter-score-2"></span></div>
-                </div>
-            </div>
-            <div class="matchup">
-                <div class="participants">
-                    <div class="participant"><img id="teamQuater3" src="" ><span id="team-quarter-3"></span><span id="quarter-score-3"></span></div>
-                    <div class="participant"><img id="teamQuater4" src="" ><span id="team-quarter-4"></span><span id="quarter-score-4"></span></div>
-                </div>
-            </div>
+    <!-- Phan A -->
+    <div id="day1" class="group groupA">
+        <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776; Chọn ngày hoặc bxh</button>
         </div>
-        <div class="connector">
-            <div class="merger"></div>
-            <div class="line"></div>
-        </div>
-        </div>
-        <div class="winners">
-            <div class="matchups">
-                <div class="matchup">
-                    <div class="participants">
-                        <div class="participant"><img id="teamQuater5" src="" ><span id="team-quarter-5"></span><span id="quarter-score-5"></span></div>
-                        <div class="participant"><img id="teamQuater6" src="" ><span id="team-quarter-6"></span><span id="quarter-score-6"></span></div>
-                    </div>
-                </div>
-                <div class="matchup">
-                    <div class="participants">
-                        <div class="participant"><img id="teamQuater7" src="" ><span id="team-quarter-7"></span><span id="quarter-score-7"></span></div>
-                        <div class="participant"><img id="teamQuater8" src="" ><span id="team-quarter-8"></span><span id="quarter-score-8"></span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="connector">
-                <div class="merger"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-    </section>
-    <section class="round semifinals">
-        <div class="winners">
-            <div class="matchups">
-                <div class="matchup">
-                    <div class="participants">
-                        <div class="participant"><img id="teamSemi1" src="" ><span id ='semi-team-1'></span><span id="semi-score-1"></span></div>
-                        <div class="participant"><img id="teamSemi2" src="" ><span id ='semi-team-2'></span><span id="semi-score-2"></span></div>
-                    </div>
-                </div>
-                <div class="matchup">
-                    <div class="participants">
-                        <div class="participant"><img id="teamSemi3" src="" ><span id ='semi-team-3'></span><span id="semi-score-3"></span></div>
-                        <div class="participant"><img id="teamSemi4" src="" ><span id ='semi-team-4'></span><span id="semi-score-4"></span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="connector">
-                <div class="merger"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-    </section>
-    <section class="round finals">
-        <div class="winners">
-            <div class="matchups">
-                <div class="matchup">
-                    <div class="participants">
-                        <div class="participant"><img id="teamfinal1" src="" ><span id ='teamfinal-1'></span><span id="score-champ-1"></span></div>
-                        <div class="participant"><img id="teamfinal2" src="" ><span id ='teamfinal-2'></span><span id="score-champ-2"></span></div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
+    </div>
+    
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+    
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    
+        // Close sidebar when clicking on a link in the sidebar (for smaller screens)
+
+        function closeSidebarOnClick() {
+    var sidebar = document.getElementById("mySidebar");
+    var width = window.innerWidth;
+    if (width < 992) {
+        sidebar.style.display = "none";
+    }
+}
+
+// Add event listeners to each sidebar link
+var sidebarLinks = document.querySelectorAll(".linkElements");
+sidebarLinks.forEach(function(link) {
+    link.addEventListener("click", closeSidebarOnClick);
+});
+        // Close sidebar when window resizes to larger screens
+;
+    </script>
 <script src="arena_of_valor/bracket.js"></script>
 </body>
 </html>
