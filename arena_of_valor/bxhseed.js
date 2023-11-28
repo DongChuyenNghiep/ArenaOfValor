@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_TABLE = 'A146:J183';
+let SHEET_RANGE_TABLE = 'A146:K183';
 
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID_1}/gviz/tq?sheet=${SHEET_TITLE_DAY_1}&range=${SHEET_RANGE_TABLE}`;
 
@@ -29,7 +29,6 @@ image.src = imageSrc;
 image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1
-cell2.textContent = rowData[2].v;
 cell3.textContent = rowData[3].v;
 cell4.textContent = rowData[4].v;
 cell5.textContent = rowData[5].v;
@@ -37,6 +36,20 @@ cell6.textContent = rowData[6].v;
 cell7.textContent = rowData[7].v;
 cell8.textContent = rowData[8].v;
 cell9.textContent = rowData[9].v;
+function updateTextContent() {
+    if (window.innerWidth > 768) {
+      cell2.textContent = rowData[2].v;
+
+    } else {
+
+        cell2.textContent = rowData[10].v;
+    }
+  }
+  // Initial setup based on window width
+  updateTextContent();
+
+  // Update text content on window resize
+  window.addEventListener('resize', updateTextContent);
 
 row.appendChild(cell0);
 row.appendChild(cell1);
