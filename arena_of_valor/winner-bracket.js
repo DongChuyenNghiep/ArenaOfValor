@@ -49,7 +49,7 @@ fetch(FULL_URL_WINNER)
           let teamImageElement = document.getElementById("team" + (i+1));
           let teamname = document.getElementById("team-" + (i+1));
           let score_round_1 = document.getElementById("score-" + (i+1));
-          teamImageElement.src = valueA[i];
+          teamImageElement.src = "/"+valueA[i];
           teamname.textContent = valueB[i];
           score_round_1.textContent = valueC[i];
         }
@@ -78,7 +78,7 @@ fetch(FULL_URL_WINNER)
             let teamImageElement = document.getElementById("teamWinner" + (i+1));
             let teamname = document.getElementById("teamWinner-" + (i+1));
             let score_round_16 = document.getElementById("teamwinner-" + (i+1));
-            teamImageElement.src = valueD[i];
+            teamImageElement.src = "/"+valueD[i];
             teamname.textContent = valueE[i];
             score_round_16.textContent = valueF[i];
           }
@@ -103,7 +103,7 @@ fetch(FULL_URL_WINNER)
           let teamImageElement = document.getElementById("teamfinal" + (j+1));
           let teamname = document.getElementById("teamfinal-" + (j+1));
           let score_round_16 = document.getElementById("score-final-" + (j+1));
-          teamImageElement.src = valueG[j];
+          teamImageElement.src = "/"+valueG[j];
           teamname.textContent = valueH[j];
           score_round_16.textContent = valueI[j];
         }

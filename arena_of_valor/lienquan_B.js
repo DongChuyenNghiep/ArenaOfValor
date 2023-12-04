@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_B = 'A25:G36';
+let SHEET_RANGE_B = 'A25:O36';
 
 let FULL_URL_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_B}`;
 
@@ -13,7 +13,7 @@ fetch(FULL_URL_B)
       let rowData = data.table.rows[i].c;
       
       let match = document.createElement('h6')
-      match.textContent = "Trận " + rowData[6].v;
+      match.textContent = "Trận " + rowData[8].v;
       match.classList.add('match');
       dataBody.appendChild(match)
 
@@ -29,12 +29,12 @@ fetch(FULL_URL_B)
       // Create an image element for the team logo
       let img1 = document.createElement('img');
       img1.classList.add('team-logo');
-      img1.src = rowData[0].v; // Set the image source from the data
+      img1.src = "/"+rowData[0].v; // Set the image source from the data
       img1.alt = rowData[1].v + ' Logo'; // Set the alt text based on the team name
       teamDiv1.appendChild(img1);
 
       let span1 = document.createElement('span');
-      span1.textContent = rowData[1].v;
+      
       span1.classList.add('team-name');
       teamDiv1.appendChild(span1);
 
@@ -50,7 +50,7 @@ fetch(FULL_URL_B)
       scoreSpan.classList.add('score');
 
       let span2 = document.createElement('span');
-      span2.textContent = rowData[2].v;
+      span2.textContent = rowData[3].v;
       span2.classList.add('score-left'); // Add the 'score-left' class
 
       let gachSpan = document.createElement('span');
@@ -58,7 +58,7 @@ fetch(FULL_URL_B)
       gachSpan.classList.add('gach'); // Add the 'gach' class
 
       let span3 = document.createElement('span');
-      span3.textContent = rowData[3].v;
+      span3.textContent = rowData[4].v;
       span3.classList.add('score-right'); // Add the 'score-right' class
 
       let winnerSpan = document.createElement('span');
@@ -72,18 +72,32 @@ fetch(FULL_URL_B)
       teamDiv2.classList.add('team');
 
       let span4 = document.createElement('span');
-      span4.textContent = rowData[4].v;
+      
       span4.classList.add('team-name');
       teamDiv2.appendChild(span4);
 
       // Create an image element for the team logo
       let img2 = document.createElement('img');
       img2.classList.add('team-logo');
-      img2.src = rowData[5].v; // Set the image source from the data
-      img2.alt = rowData[4].v + ' Logo'; // Set the alt text based on the team name
+      img2.src = "/"+rowData[7].v; // Set the image source from the data
+      img2.alt = rowData[6].v + ' Logo'; // Set the alt text based on the team name
       teamDiv2.appendChild(img2);
 
-      if (parseInt(rowData[2].v) > parseInt(rowData[3].v)) {
+      function updateTextContent() {
+        if (window.innerWidth > 768) {
+          span1.textContent = rowData[1].v;
+          span4.textContent = rowData[6].v;
+        } else {
+          span1.textContent = rowData[2].v;
+          span4.textContent = rowData[5].v;
+        }
+      }
+      // Initial setup based on window width
+      updateTextContent();
+
+      // Update text content on window resize
+      window.addEventListener('resize', updateTextContent);
+      if (parseInt(rowData[3].v) > parseInt(rowData[4].v)) {
         img2.classList.add('loser-darker');
         span4.classList.add('loser-darker');
         img1.classList.add('winner-brighter');
@@ -99,7 +113,7 @@ fetch(FULL_URL_B)
         
       }
 
-      else if (parseInt(rowData[2].v) < parseInt(rowData[3].v)) {
+      else if (parseInt(rowData[3].v) < parseInt(rowData[4].v)) {
         img1.classList.add('loser-darker');
         span1.classList.add('loser-darker');
         img2.classList.add('winner-brighter');

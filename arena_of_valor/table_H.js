@@ -1,12 +1,12 @@
-let SHEET_RANGE_B_1 = 'A10:J13';
+let SHEET_RANGE_H_1 = 'A52:J55';
 
-let FULL_URL_TABLE_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_B_1}`;
+let FULL_URL_TABLE_H = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_H_1}`;
 
-fetch(FULL_URL_TABLE_B)
+fetch(FULL_URL_TABLE_H)
 .then((res) => res.text())
 .then((rep) => {
     let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let dataBody = document.getElementById('table_ranktable_B');
+    let dataBody = document.getElementById('table_ranktable_H');
     for (let i = 0; i < data.table.rows.length; i++) {
         let rowData = data.table.rows[i].c;
 let row = document.createElement('tr');

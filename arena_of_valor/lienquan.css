@@ -461,5 +461,8 @@ h3{
     .team-name {
         font-weight: bold;
         font-size: 14px;
-    } 
+    }
+    td:nth-child(1),td:nth-child(2){
+        position: sticky;
+    }
 }

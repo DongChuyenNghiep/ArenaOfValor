@@ -394,6 +394,12 @@ h3{
 }
 
 @media screen and (max-width:765.98px){
+    td:nth-child(1),td:nth-child(2){
+        width: 6% !important;
+    }
+    td:nth-child(3) {
+        width: 12% !important;
+    }
     h3{
         font-size: 22px !important;
     }

@@ -1,13 +1,13 @@
 
-let SHEET_RANGE_D = 'A64:O75';
+let SHEET_RANGE_E = 'A84:O95';
 
-let FULL_URL_D = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_D}`;
+let FULL_URL_E = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_E}`;
 
-fetch(FULL_URL_D)
+fetch(FULL_URL_E)
   .then((res) => res.text())
   .then((rep) => {
     let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let dataBody = document.getElementById('table_fixture_D');
+    let dataBody = document.getElementById('table_fixture_E');
 
     for (let i = 0; i < data.table.rows.length; i++) {
       let rowData = data.table.rows[i].c;
