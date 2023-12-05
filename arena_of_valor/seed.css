@@ -158,7 +158,6 @@ span.winner, span.loser {
     display: inline-block;
     width: 30px; /* Adjust the width as needed */
     text-align: center; /* Optional: Center the text within the elements */
-
     justify-content: space-between;
   }
 .score-container {

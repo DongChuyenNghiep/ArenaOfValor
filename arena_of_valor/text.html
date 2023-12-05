@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .focusable-link {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styling for the focused link */
+.focusable-link.focus {
+  color: 
+#e5871f; /* Change the outline or style as desired */
+}
+    </style>
+</head>
+<body>
+    <div class="links-container">
+        <a href="#" class="focusable-link">Link 1</a>
+        <a href="#" class="focusable-link">Link 2</a>
+        <a href="#" class="focusable-link">Link 3</a>
+      </div>
+      
+      <div class="links-container">
+        <a href="#" class="focusable-link">Link 1</a>
+        <a href="#" class="focusable-link">Link 2</a>
+        <a href="#" class="focusable-link">Link 3</a>
+      </div>
+      <script>
+       const linkContainers = document.querySelectorAll('.links-container');
+
+linkContainers.forEach((container, containerIndex) => {
+  const links = container.querySelectorAll('.focusable-link');
+
+  links.forEach((link, linkIndex) => {
+    link.addEventListener('click', function() {
+      // Remove focus class from all links in this container
+      links.forEach(link => link.classList.remove('focus'));
+      // Add focus class to the clicked link
+      this.classList.add('focus');
+
+      // Store the index of the clicked link in localStorage for this container
+      localStorage.setItem(`focusedLink-${containerIndex}`, linkIndex.toString());
+    });
+  });
+
+  // Check localStorage for the focusedLink item for this container
+  const focusedLinkIndex = localStorage.getItem(`focusedLink-${containerIndex}`);
+  if (focusedLinkIndex !== null) {
+    // Apply focus to the link based on the stored index for this container
+    links[focusedLinkIndex].classList.add('focus');
+  }
+});
+      </script>
+</body>
+</html>
