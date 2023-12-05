@@ -76,11 +76,9 @@ div.table_rank_A{
     overflow-x: auto;
     overflow-y: auto;
 }
-tr:nth-child(1),tr:nth-child(2){
-    border-left: 8px solid  rgba(0, 255, 255, 0.762) ;
-}
+
 tr:nth-child(3),tr:nth-child(4){
-    border-left: 8px solid rgb(220, 8, 8);
+
     filter: brightness(50%);
 }
 tr.title{
@@ -462,7 +460,40 @@ h3{
         font-weight: bold;
         font-size: 14px;
     }
-    td:nth-child(1),td:nth-child(2){
+    .sticky-col {
+        position: -webkit-sticky;
         position: sticky;
-    }
+
+      }
+      table.my-table{
+        width: 90%;
+      }
+      .wrapper{
+        position: relative;
+    overflow: auto;
+    white-space: nowrap;
+
+      }
+      .first-col {
+        background-color: black;
+        left: 0;
+      }
+      
+      .second-col {
+        background-color:black;
+        left: 16.5%
+      }
+      .sec-col {
+        background-color:black;
+        left: 16.5%;
+      }
+      td{
+        padding: 0 50px;
+      }
+      td:nth-child(1),td:nth-child(2){
+        padding: 0 10px;
+      }
+      tbody{
+        width: 95%;
+      }
 }

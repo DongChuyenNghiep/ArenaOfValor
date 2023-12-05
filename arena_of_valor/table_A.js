@@ -51,7 +51,10 @@ cell7.textContent = rowData[7].v;
 cell8.textContent = rowData[8].v;
 cell9.textContent = rowData[9].v;
 
-
+cell1.classList.add('first-col');
+cell2.classList.add('second-col');
+cell1.classList.add('sticky-col');
+cell2.classList.add('sticky-col');
 
 row.appendChild(cell1);
 row.appendChild(cell2);

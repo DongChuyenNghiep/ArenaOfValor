@@ -41,7 +41,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
         <a href="#groupA" class="w3-bar-item w3-button linkElements custom-focus">GROUP A</a>
@@ -53,11 +53,11 @@
         <a href="#groupG" class="w3-bar-item w3-button linkElements">GROUP G</a>
         <a href="#groupH" class="w3-bar-item w3-button linkElements">GROUP H</a>
 
-      </div>
-      
+    </div>
+
     <!--Phan A-->
     <div id="groupA" class="group groupA">
-        
+
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
         </div>
@@ -75,39 +75,41 @@
             <div class="button-filter">
                 <button class="filter-table" onclick="showTableA('fixture')" id="button_fixtureA">Lịch thi đấu</button>
                 <button class="filter-table" onclick="showTableA('rank') " id="button_rankA">Bảng xếp hạng</button>
-                
+
             </div>
 
             <div id="table_fixture_A" class="table_fixture_A">
-                    <h3>FIXTURE NHÓM A</h3>
+                <h3>FIXTURE NHÓM A</h3>
                 <div id='table_fixture_A'></div>
             </div>
 
             <div class="table_rank_A">
                 <h3> BẢNG XẾP HẠNG NHÓM A</h3>
-                <table class=" my-table">
-                    <thead>
-                        <tr class="title">
-                            <th scope="col" id="logo"></th>
-                            <th scope="col" id="lop">Lớp</th>
-                            <th scope="col" id="match">Trận</th>
-                            <th scope="col" id="win">Thắng</th>
-                            <th scope="col" id="lose">Thua</th>
-                            <th scope="col" id="win">Kill</th>
-                            <th scope="col" id="lose">Death</th>
-                            <th scope="col" id="win">Hiệu số</th>
-                            <th scope="col" id="win">Điểm</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table_ranktable_A">
-                        <!-- The table body will be populated with data dynamically -->
-                    </tbody>
-                </table>
+                <div class="wrapper">
+                    <table class=" my-table">
+                        <thead>
+                            <tr class="title">
+                                <th scope="col" id="logo" class="sticky-col first-col"></th>
+                                <th scope="col" id="lop" class="sticky-col sec-col">Lớp</th>
+                                <th scope="col" id="match">Trận</th>
+                                <th scope="col" id="win">Thắng</th>
+                                <th scope="col" id="lose">Thua</th>
+                                <th scope="col" id="win">Kill</th>
+                                <th scope="col" id="lose">Death</th>
+                                <th scope="col" id="win">Hiệu số</th>
+                                <th scope="col" id="win">Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_ranktable_A">
+                            <!-- The table body will be populated with data dynamically -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-<!--Phan B-->
-    
+    <!--Phan B-->
+
     <div id="groupB" class="group groupB">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -157,7 +159,7 @@
     </div>
 
     <!--Phan C-->
-    
+
     <div id="groupC" class="group groupC">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -207,7 +209,7 @@
     </div>
 
     <!--Phan D-->
-    
+
     <div id="groupD" class="group groupD">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -258,7 +260,7 @@
 
 
     <!--Phan E-->
-    
+
     <div id="groupE" class="group groupE">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -305,11 +307,11 @@
                 </table>
             </div>
         </div>
-        
+
     </div>
 
     <!--Phan F-->
-    
+
     <div id="groupF" class="group groupF">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -356,11 +358,11 @@
                 </table>
             </div>
         </div>
-        
+
     </div>
 
     <!--Phan G-->
-    
+
     <div id="groupG" class="group groupG">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -407,11 +409,11 @@
                 </table>
             </div>
         </div>
-        
+
     </div>
 
     <!--Phan H-->
-    
+
     <div id="groupH" class="group groupH">
         <div class="w3-teal">
             <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
@@ -458,9 +460,9 @@
                 </table>
             </div>
         </div>
-        
+
     </div>
-    
+
     <script src="sidebar.js"></script>
     <script src="focus_link.js"></script>
     <script src="chooseA.js"></script>
