@@ -334,7 +334,7 @@ h3 {
         width: 82%;
         margin-left: 18%;
     }
-
+    
     #mySidebar {
         width: 18%;
         background-color: #212529;
@@ -415,14 +415,20 @@ h3 {
     }
 
     div.w3-teal {
-        padding-top: 100px;
+        padding-top: 158px;
         color: black;
-        padding: 0;
+        width: 100%;
+        background-color: #5800bc !important;
+
     }
 
-    button.w3-teal {
-        padding: 100px;
+    button.w3-teal{
+        background: #5800bc !important;
+        width: 100%;
+        text-align: left;
+        padding-left: 18px;
     }
+
 
     .button-filter {
         padding: 30px 0 20px 20px;
@@ -436,7 +442,12 @@ h3 {
         border-right: 8px solid rgba(0, 255, 255, 0.762) !important;
     }
 
-
+    button.navbar-toggler.color-expand{
+        color: white !important;
+        font-size: 24px;
+        padding: 6px;
+        border-radius: 6px;
+    }
     button.w3-bar-item {
         background-color: #212529;
         padding: 40px !important;
@@ -499,10 +510,18 @@ h3 {
     }
 
     div.w3-teal {
-        padding-top: 145px;
+        padding-top: 150px;
         color: black;
         width: 100%;
+        background-color: #5800bc !important;
 
+    }
+
+    button.w3-teal{
+        background: #5800bc !important;
+        padding-left: 18px;
+        text-align: left;
+        width: 100%;
     }
 
     #mySidebar {
@@ -510,7 +529,7 @@ h3 {
     }
 
     button.w3-teal {
-        padding-top: 20px;
+        padding-top: 24px;
     }
 
     table.my-table {
@@ -622,5 +641,11 @@ h3 {
 
     tbody {
         width: 95%;
+    }
+    button.navbar-toggler.color-expand{
+        color: white !important;
+        font-size: 24px;
+        padding: 6px;
+        border-radius: 6px;
     }
 }
