@@ -48,7 +48,10 @@ button.filter-table {
     z-index: 2;
     padding: 20px 0;
 }
-
+.disabled{
+    color:white !important;
+    filter: brightness(50%);
+}
 div.cac-vong a {
     color: white !important;
     text-decoration: none !important;
@@ -280,7 +283,9 @@ h3 {
         width: 82%;
         margin-left: 18%;
     }
-
+    ul.navbar-nav li{
+        margin: 0 10px;
+    }
     #mySidebar {
         width: 18%;
         background-color: #212529;
@@ -327,6 +332,9 @@ h3 {
         background-color: #212529 !important;
     }
 
+}
+.w3_open{
+    display: block;
 }
 
 @media screen and (max-width:1399.98px) and (min-width:992px) {
