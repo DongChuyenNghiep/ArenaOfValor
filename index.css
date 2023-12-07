@@ -15,6 +15,9 @@ div.welcome{
     text-align: left;
     display: flex;
 }
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 section.text{
     padding-top: 20px;
     width: 80%;
@@ -56,22 +59,7 @@ div.footer{
     padding: 22px 0;
 
 }
-div.text-right{
-    padding-left: 700px;
-    justify-content: center;
-}footer ul.social li:first-child,footer ul{
-    padding-left: 0;
-}
-footer p{
-    font-size: 17px;
-    margin-bottom: 0px !important;
-}
-footer ul.social li{
-    display: inline;
-    list-style: none;
-    padding-left: 20px;
-    font-size: 40px;
-}
+
 
 @media screen and (max-width:992px) {
     div.welcome{
@@ -92,7 +80,7 @@ footer ul.social li{
     section.text p{
         list-style: none;
         font-size: 17px;
-        width: 90%;
+        width: 100%;
     }
     div.image1{
         padding: 5px 0 20px 0;
