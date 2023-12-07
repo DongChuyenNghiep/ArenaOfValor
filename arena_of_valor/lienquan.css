@@ -626,16 +626,19 @@ h3 {
     .first-col {
         background-color: black;
         left: 0;
+
     }
 
     .second-col {
         background-color: black;
-        left: 16.5%
+        left: 14%;
+
     }
 
     .sec-col {
         background-color: black;
-        left: 16.5%;
+        left: 14%;
+
     }
 
     td {

@@ -27,7 +27,7 @@ image.src = imageSrc;
 image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1
-function updateTextContent() {
+function updateTextContentG() {
 if (window.innerWidth > 768) {
   cell2.textContent = rowData[1].v;
 
@@ -37,10 +37,10 @@ if (window.innerWidth > 768) {
 }
 }
 // Initial setup based on window width
-updateTextContent();
+updateTextContentG();
 
 // Update text content on window resize
-window.addEventListener('resize', updateTextContent);
+window.addEventListener('resize', updateTextContentG);
 cell3.textContent = rowData[3].v;
 cell4.textContent = rowData[4].v;
 cell5.textContent = rowData[5].v;
@@ -49,8 +49,10 @@ cell7.textContent = rowData[7].v;
 cell8.textContent = rowData[8].v;
 cell9.textContent = rowData[9].v;
 
-
-
+cell1.classList.add('first-col');
+cell2.classList.add('second-col');
+cell1.classList.add('sticky-col');
+cell2.classList.add('sticky-col');
 
 row.appendChild(cell1);
 row.appendChild(cell2);
