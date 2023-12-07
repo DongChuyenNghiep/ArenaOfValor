@@ -624,23 +624,24 @@ h3 {
     }
 
     .first-col {
-        background-color: black;
+        background-color: #041e4d;
         left: 0;
 
     }
 
     .second-col {
-        background-color: black;
+        background-color: #041e4d;
         left: 14%;
 
     }
 
     .sec-col {
-        background-color: black;
+        background-color: #041e4d;
         left: 14%;
+        box-shadow: 10px;
+
 
     }
-
     td {
         padding: 0 50px;
     }
@@ -648,6 +649,7 @@ h3 {
     td:nth-child(1),
     td:nth-child(2) {
         padding: 0 10px;
+        background-color: #041e4d;
     }
 
     tbody {
