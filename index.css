@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.welcome{
+    padding-top: 180px;
+    width: 70%;
+    margin: 0px auto;
+    text-align: left;
+    display: flex;
+}
+section.text{
+    padding-top: 20px;
+    width: 80%;
+}
+h2{
+    font-size: 40px;
+    font-weight: 750;
+}
+
+section.text p{
+    list-style: none;
+    font-size: 20px;
+    width: 90%;
+}
+section.text a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #e5ba85;
+    transition: 0.3s color;
+
+}
+section.text a:hover{
+    color: #f5921d;
+}
+footer{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    margin-top: 72px;
+}
+footer img{
+    height: 80px;
+    padding-left: 50px;
+}
+div.footer{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 22px 0;
+
+}
+div.text-right{
+    padding-left: 700px;
+    justify-content: center;
+}footer ul.social li:first-child,footer ul{
+    padding-left: 0;
+}
+footer p{
+    font-size: 17px;
+    margin-bottom: 0px !important;
+}
+footer ul.social li{
+    display: inline;
+    list-style: none;
+    padding-left: 20px;
+    font-size: 40px;
+}
+
+@media screen and (max-width:992px) {
+    div.welcome{
+        display: block;
+        width: 90%;
+        justify-content: center;
+        padding-top: 100px;
+    }
+    section.text{
+        padding-top: 30px;
+        width: 100%;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 750;
+    }
+    
+    section.text p{
+        list-style: none;
+        font-size: 17px;
+        width: 90%;
+    }
+    div.image1{
+        padding: 5px 0 20px 0;
+    }
+}
