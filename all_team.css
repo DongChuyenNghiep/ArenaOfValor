@@ -96,7 +96,7 @@ div.image-logo:hover + div.table-player {
 td.name{
     text-align: center;
 }
-@media screen and (max-width:1400px) and (min-width:768px){
+@media screen and (max-width:1366px) and (min-width:768px){
     div.image-logo {
         width: 45%;
         display: inline-block;
