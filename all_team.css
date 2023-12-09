@@ -164,7 +164,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width:81.5% !important;
+        width:80% !important;
         padding: 10px 0 0 0;
         margin: auto;
     }
@@ -207,8 +207,12 @@ td.name{
         width: 100%;
     }
     div.image-logo:hover + div.table-player {
-        display: none; /* Show the table-player when hovering its preceding image-logo */
-    
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
         
     }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+
 }
