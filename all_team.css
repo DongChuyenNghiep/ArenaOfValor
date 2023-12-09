@@ -180,10 +180,9 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 40% !important;
+        width: 85% !important;
         height: 70%;
-        padding: 10px 0 0 0;
-        margin: auto;
+        padding: 0;
     }
     div.box1:last-child{
         margin: 0 auto;
@@ -236,7 +235,8 @@ td.name{
 }
 @media screen and (max-width:425px) {
     div.image-logo {
-        width: 47%;
+        width: 47%; 
+        height: 155px !important;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
@@ -249,10 +249,9 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 80% !important;
-        height: 70%;
-        padding: 10px 0 0 0;
-        margin: auto;
+        width: 102% !important;
+        height: 102%;
+        padding: 0;
     }
     div.box1:last-child{
         margin: 0 auto;
