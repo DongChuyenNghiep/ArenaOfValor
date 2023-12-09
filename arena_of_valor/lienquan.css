@@ -121,11 +121,7 @@ div.table_rank_A {
     overflow-y: auto;
 }
 
-tr:nth-child(3),
-tr:nth-child(4) {
 
-    filter: brightness(50%);
-}
 
 tr.title {
     border-left: none;

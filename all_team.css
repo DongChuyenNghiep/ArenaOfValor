@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Nunito' !important;
+    font-size: 17px;
+    background-color: #08142c;
+    color: white;
+}
+
+div.all-team{
+    padding-top: 120px;
+    
+}
+section.info h2{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+div.rowbox{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 40px;
+    
+}
+div.box1{
+    margin-right: 20px;
+    background-color: white;
+}
+div.box1:last-child{
+    margin-right: 0px;
+}
+
+div.box{
+    border: 1px white solid;
+    width: 306px;
+    height:220px;
+}
+
+div.box img{
+margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 220px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section.seed{
+    text-align: center;
+    color: white;
+    border-top: 1px white solid;
+    display: block;
+    width: 306px;
+    background-color: #08142c;
+    border: 1px solid white;
+}
+section.seed p{
+    justify-content: center;
+    padding-top: 10px;
+
+}
+div.image-logo:hover img{
+    display: none;
+
+}
+div.button-choose{
+    display: flex;
+    width: 100%;
+}
+
+div.table-player {
+    display: none;
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.3s ease;
+
+}
+table.table-player{
+    background-color: #08142c;
+    border: 1px solid white;
+}
+table.table-player td p{
+    text-align: center;
+    margin: 0;  
+}
+
+div.image-logo:hover + div.table-player {
+    display: block; /* Show the table-player when hovering its preceding image-logo */
+
+    
+}
+td.name{
+    text-align: center;
+}
+@media screen and (max-width:1400px) {
+    div.image-logo {
+        width: 48.5%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        width: 101%;
+        height: 90%;
+        padding: 10px 0 0 0;
+        margin: 0;
+    }
+    
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 92%;
+    }
+    div.box1{
+        margin: 0 0 10px 0;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 92%;
+        height: 90%;
+    }
+    div.table-player{
+        border-left: 1px solid white;
+    }
+    table td{
+        background-color: #08142c !important;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+}
+@media screen and (max-width:450px) {
+    div.image-logo {
+        width: 47%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 51.5%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        width:81.5% !important;
+        padding: 10px 0 0 0;
+        margin: auto;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    div.table-player{
+        border-left: 1px solid white;
+    }
+    table td{
+        background-color: #08142c !important;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: none; /* Show the table-player when hovering its preceding image-logo */
+    
+        
+    }
+}
