@@ -104,17 +104,17 @@ td.name{
     }
     
     div.table-player {
-        width: 54.2%;
+        width: 54.5%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 40% !important;
+        width: 51.5% !important;
         height: 70%;
-        padding: 10px 0 0 0;
         margin: auto;
+        padding: 0;
     }
     div.box1:last-child{
         margin: 0 auto;
@@ -144,6 +144,9 @@ td.name{
     div.table-player{
         border-left: 1px solid white;
     }
+    table{
+        height: 100%;
+    }
     table td{
         background-color: #08142c !important;
     }
@@ -165,7 +168,7 @@ td.name{
 
 
 }
-@media screen and (max-width:768px) and (min-width:425px){
+@media screen and (max-width:768px) and (min-width:424.98px){
     div.image-logo {
         width: 47%;
         display: inline-block;
@@ -180,7 +183,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 85% !important;
+        width: 66% !important;
         height: 70%;
         padding: 0;
     }
@@ -233,7 +236,7 @@ td.name{
 
 
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:424.98px) {
     div.image-logo {
         width: 47%; 
         height: 155px !important;
