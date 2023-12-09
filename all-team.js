@@ -1,6 +1,6 @@
-let SHEET_RANGE_TABLE = 'C55:AO65';
+let SHEET_RANGE_TABLE = 'B70:AO80';
 SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o'
-SHEET_TITLE = 'Sheet 8'
+SHEET_TITLE = 'Form Responses 4'
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_TABLE}`;
 
 fetch(FULL_URL_TABLE)
