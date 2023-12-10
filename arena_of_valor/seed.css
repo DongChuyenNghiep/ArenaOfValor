@@ -409,6 +409,7 @@ h3{
     #mySidebar{
         background-color: #212529;
         padding: 0px;
+        margin-top: 70px;
     }
     #mySidebar a{
         color: white ;
