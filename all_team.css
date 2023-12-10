@@ -252,7 +252,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 102% !important;
+        width: 100% !important;
         height: 102%;
         padding: 0;
     }
