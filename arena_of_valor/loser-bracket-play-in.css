@@ -51,7 +51,7 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  margin: 850px 0px 0px 0px;
+  margin: 1040px 0px 0px 0px;
   padding-bottom: 50px;
   padding-left: 60px;
 }
@@ -91,15 +91,15 @@ h2{
 
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant.winner {
   color: white;
-  border-color: rgba(0, 255, 255, 0.762);
+  border-color: rgba(255, 191, 0, 0.918);
 }
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant.winner .score{
-  color: rgba(0, 255, 255, 0.919);
+  color: rgba(255, 191, 0, 0.918);
 }
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant.advance {
   color: black;
-  background-color: rgba(0, 255, 255, 0.762);
-  border-color: rgba(0, 255, 255, 0.251);
+  background-color: rgba(255, 191, 0, 0.918);
+  border-color: rgba(255, 191, 0, 0.918);
 
 }
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant.eliminate {
@@ -166,7 +166,7 @@ h2{
   vertical-align: top;
 }
 .loser-bracket .round .winners>div.connector .line {
-  border-bottom: thin solid #212529;
+  border-bottom: thin solid #5800bc;
   height: 64px;
 }
 
@@ -183,7 +183,7 @@ h2{
   width: 0%;
   height: 50%;
   border: 0 solid;
-  border-color: #212529;
+  border-color: #5800bc;
 }
 
 .loser-bracket .round .winners>div.connector .merger:before {
@@ -228,16 +228,3 @@ h2{
     height: 0px;
   }
   
-  @media screen and (max-width:1399.98px) and (min-width:768px) {
-    .loser-bracket{
-      padding: 30px 0px 0px 0px;
-      margin-top: 600px;
-    }
-    .loser-bracket .round .winners>div.connector .line,
-    .loser-bracket .round .winners>div.connector .merger {
-  box-sizing: border-box;
-  width: 70px;
-  display: inline-block;
-  vertical-align: top;
-}
-  }

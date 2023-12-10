@@ -102,6 +102,9 @@ tr:nth-child(31),tr:nth-child(32),tr:nth-child(33),tr:nth-child(34),tr:nth-child
 tr.title{
     border-left:  none;
 }
+td:nth-child(1){
+    text-align: center;
+}
 td:nth-child(2){
     text-align: right;
     width: 8%;
@@ -110,7 +113,9 @@ td:nth-child(3){
     text-align: left;
     width: 17%;
 }
-
+th#lop{
+    text-align: center;
+}
 
 td,th{
     border-bottom: 1px solid #212529;
@@ -123,11 +128,7 @@ td,tr{
 a.w3-bar-item{
     color: black;
 }
-body{
-    background-color: #212529;
-    color: white;
-    font: 17px;
-}
+
 
 .row1 {
     display: flex;
@@ -140,7 +141,7 @@ body{
     padding: 7px 20px;
 }
 .loser-darker{
-    filter: brightness(35%);
+    filter: brightness(60%);
 }
 
 .winner-brighter{
@@ -235,16 +236,12 @@ h3{
     div.w3-container{
         width: 82%;
         margin-left: 18%;
+        padding-top: 60px;
     }
     td{
         width: 100px;
     }
-    #mySidebar{
-        width: 18%;
-        background-color: #212529;
-        padding-top: 80px;
-        
-    }
+
     div.cac-vong{
         padding: 40px 0px 0 60px;
       }
@@ -264,13 +261,7 @@ h3{
 
     }
 
-    .myLink:focus{
-        color: white !important;
-        padding: 40px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.195) !important;
-        filter: brightness(120%) !important;
-        border-right: 8px solid rgba(0, 255, 255, 0.762) !important;  
-    }
+
     
 
     .button-filter{
@@ -390,6 +381,9 @@ h3{
     h3{
         font-size: 25px !important;
     }
+    td,th{
+        background-color: #5800bc !important;
+    }
 }
 
 @media screen and (max-width:765.98px){
@@ -431,7 +425,7 @@ h3{
         width: 100%;
     }
     div.w3-teal{
-        margin-top: 80px;
+        margin-top: 10px;
     }
 
     button.w3-teal{
@@ -500,11 +494,18 @@ h3{
         font-weight: bold;
         font-size: 14px;
     } 
+    td,th{
+        background-color: #5800bc !important;
+    }
 
    
 }
 @media screen and (max-width:360.98px){
     div.w3-teal{
-        margin-top: 115px;
+        margin-top: 8px;
+    }
+
+    td,th{
+        background-color: #5800bc !important;
     }
 }
