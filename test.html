@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* Basic styling for the leaderboard */
+        .leaderboard {
+          width: 300px;
+          /* Add any other styles you need */
+        }
+        
+        /* Hide all but the first page */
+        .leaderboard-list:not(:first-child) {
+          display: none;
+        }
+        
+        /* Style for pagination buttons */
+        .pagination {
+          margin-top: 10px;
+        }
+        
+        .pagination button {
+          padding: 5px 10px;
+          margin-right: 5px;
+          cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="leaderboard">
+        <ul class="leaderboard-list" id="page1">
+          <!-- Your leaderboard items for page 1 -->
+          <li>Player 1 - Score: 1000</li>
+          <li>Player 2 - Score: 950</li>
+          <!-- Add more leaderboard items as needed -->
+        </ul>
+        
+        <ul class="leaderboard-list" id="page2" style="display: none;">
+          <!-- Your leaderboard items for page 2 -->
+          <li>Player 3 - Score: 900</li>
+          <li>Player 4 - Score: 850</li>
+          <!-- Add more leaderboard items as needed -->
+        </ul>
+        
+        <!-- Add more ul elements for additional pages -->
+        
+        <div class="pagination">
+          <button onclick="showPage(1)">1</button>
+          <button onclick="showPage(2)">2</button>
+          <!-- Add more buttons for additional pages -->
+        </div>
+      </div>
+      <script>
+        function showPage(pageNumber) {
+  // Hide all leaderboard pages
+  const pages = document.querySelectorAll('.leaderboard-list');
+  pages.forEach(page => {
+    page.style.display = 'none';
+  });
+
+  // Show the selected page
+  const selectedPage = document.getElementById(`page${pageNumber}`);
+  if (selectedPage) {
+    selectedPage.style.display = 'block';
+  }
+}
+
+      </script>
+</body>
+</html>
