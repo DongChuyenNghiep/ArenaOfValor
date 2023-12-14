@@ -242,22 +242,22 @@ td.name{
 @media screen and (max-width:425.98px) {
     
     div.image-logo {
-        width: 46%; 
+        width: 44%; 
         height: 145px !important;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     div.table-player {
-        width: 52.7%;
+        width: 54.7%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 102.5% !important;
-        height: 102.5%;
+        width: 102% !important;
+        height: 103%;
         padding: 0;
     }
     section.info h2{
