@@ -328,7 +328,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 104%;
+        height: 104.5%;
         aspect-ratio: 1/1;
         padding: 0;
         margin: auto 0;
@@ -470,7 +470,7 @@ td.name{
     }
     
     div.table-player {
-        width: 58.6%;
+        width: 58.5%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
