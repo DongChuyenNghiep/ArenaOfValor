@@ -1,71 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>/* Basic styling for the leaderboard */
-        .leaderboard {
-          width: 300px;
-          /* Add any other styles you need */
-        }
-        
-        /* Hide all but the first page */
-        .leaderboard-list:not(:first-child) {
-          display: none;
-        }
-        
-        /* Style for pagination buttons */
-        .pagination {
-          margin-top: 10px;
-        }
-        
-        .pagination button {
-          padding: 5px 10px;
-          margin-right: 5px;
-          cursor: pointer;
-        }
-        </style>
-</head>
-<body>
-    <div class="leaderboard">
-        <ul class="leaderboard-list" id="page1">
-          <!-- Your leaderboard items for page 1 -->
-          <li>Player 1 - Score: 1000</li>
-          <li>Player 2 - Score: 950</li>
-          <!-- Add more leaderboard items as needed -->
-        </ul>
-        
-        <ul class="leaderboard-list" id="page2" style="display: none;">
-          <!-- Your leaderboard items for page 2 -->
-          <li>Player 3 - Score: 900</li>
-          <li>Player 4 - Score: 850</li>
-          <!-- Add more leaderboard items as needed -->
-        </ul>
-        
-        <!-- Add more ul elements for additional pages -->
-        
-        <div class="pagination">
-          <button onclick="showPage(1)">1</button>
-          <button onclick="showPage(2)">2</button>
-          <!-- Add more buttons for additional pages -->
-        </div>
-      </div>
-      <script>
-        function showPage(pageNumber) {
-  // Hide all leaderboard pages
-  const pages = document.querySelectorAll('.leaderboard-list');
-  pages.forEach(page => {
-    page.style.display = 'none';
-  });
 
-  // Show the selected page
-  const selectedPage = document.getElementById(`page${pageNumber}`);
-  if (selectedPage) {
-    selectedPage.style.display = 'block';
-  }
+<head>
+  <meta charset="UTF-8">
+  <title>Paginated Leaderboard</title>
+  <style>
+.sticky {
+  position: sticky;
+  z-index: 1;
+  background-color: #f2f2f2;
 }
 
-      </script>
+@media screen and (max-width: 767px) {
+  /* Apply sticky behavior only for screens smaller than 768px */
+  .sticky {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #f2f2f2;
+  }
+}
+    .leaderboard {
+      font-family: Arial, sans-serif;
+      width: 80%;
+      margin: 20px auto;
+    }
+    table{
+      overflow: auto;
+      width: 500px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .pagination {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    button {
+      padding: 6px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="leaderboard">
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th class="sticky">Rank</th>
+          <th class="sticky">Name</th>
+          <th>Score</th>
+          <th>K</th>
+          <th>D</th>
+          <th>A</th>
+          <th>K</th>
+          <th>D</th>
+          <th>A</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <!-- Leaderboard data will be populated here -->
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for pagination and data population
+
+    const leaderboardData = [
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 1, name: 'Player 1', score: 1000, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 2, name: 'Player 2', score: 950, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+      { rank: 3, name: 'Player 3', score: 850, col4: 'Value 1', col5: 'Value 2', col6: 'Value 3', col7: 'Value 4', col8: 'Value 5' },
+    ];
+
+
+
+    const pageSize = 5; // Number of entries per page
+    let currentPage = 1;
+
+    const renderLeaderboard = (data) => {
+      const leaderboardBody = document.getElementById('leaderboardBody');
+      leaderboardBody.innerHTML = '';
+
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = startIndex + pageSize;
+
+      for (let i = startIndex; i < endIndex && i < data.length; i++) {
+        const row = `<tr><td>${data[i].rank}</td><td>${data[i].name}</td><td>${data[i].score}</td><td>${data[i].score}</td><td>${data[i].col4}</td><td>${data[i].col5}</td><td>${data[i].col6}</td><td>${data[i].col7}</td><td>${data[i].col8}</td></tr>`;
+        leaderboardBody.innerHTML += row;
+      }
+
+      document.getElementById('pageInfo').textContent = `Page ${currentPage}`;
+    };
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderLeaderboard(leaderboardData);
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      const maxPage = Math.ceil(leaderboardData.length / pageSize);
+      if (currentPage < maxPage) {
+        currentPage++;
+        renderLeaderboard(leaderboardData);
+      }
+    });
+
+    renderLeaderboard(leaderboardData); // Initial render
+  </script>
+
 </body>
+
 </html>
