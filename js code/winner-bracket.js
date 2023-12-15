@@ -1,5 +1,5 @@
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-let SHEET_TITLE = 'Sheet6';
+let SHEET_TITLE = 'Bracket';
 let SHEET_RANGE_WINNER = 'A20:I27';
 
 let FULL_URL_WINNER = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_WINNER}`;
