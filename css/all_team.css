@@ -330,7 +330,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 100%;
+        height: 10%;
         aspect-ratio: 1/1;
         padding: 0;
         margin: auto 0;
