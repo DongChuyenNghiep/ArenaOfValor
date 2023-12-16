@@ -330,7 +330,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 10%;
+        height: 100%;
         aspect-ratio: 1/1;
         padding: 0;
         margin: auto 0;
@@ -368,7 +368,7 @@ td.name{
     }
     table td{
         background-color: #08142c !important;
-        font-size: 15.8px;
+        font-size: 15px;
     }
     div.button-choose{
         display: flex;
