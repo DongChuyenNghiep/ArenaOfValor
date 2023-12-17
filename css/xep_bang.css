@@ -1,0 +1,77 @@
+body{
+    font-family: 'Nunito' !important;
+    font-size: 17px;
+    background-color: #08142c;
+    color: white;
+}
+
+div.all-team{
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 90%;
+}
+div.row{
+    display: flex;
+    justify-content: center;
+}
+section.info h2{
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+div.group{
+    width: 21%;
+    background-color: #08142c;
+    display: block;
+    padding: 0;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    border: 1px white solid;
+    margin-left: 40px;
+}
+div.group:first-child{
+    margin-left: 0;
+}
+section.name-group p{
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px white solid;
+}
+table.table-team{
+    background-color: #08142c;
+    color: white;
+    padding: 5px 0;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+.table-team{
+    border-radius: 20px;
+}
+table td:nth-child(2){
+    width: 4%;
+}
+table td:nth-child(2) p{
+    margin-left: 20px;
+    margin-top: 12px;
+}
+table.table-team td:nth-child(1){
+    width: 1%;
+    text-align: center;
+}
+img.team-logo {
+    aspect-ratio: 1/1;
+}
+div.row{
+    margin-bottom: 40px;
+}
+
+div.group a{
+    text-decoration: none;
+}
+
+@media screen and (max-width:1439px) and (min-width:1024px) {
+    
+    
+}
