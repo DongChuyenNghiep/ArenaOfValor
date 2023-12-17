@@ -345,7 +345,7 @@ td.name{
     /* Rest of your CSS styles */
     div.rowbox {
         display: block;
-        width: 101.5%;
+        width: 100%;
         padding-bottom: 0px;
         margin: 0 auto;
     }
