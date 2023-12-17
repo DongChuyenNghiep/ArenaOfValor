@@ -239,25 +239,25 @@ td.name{
 
 
 }
-@media screen and (max-width:425.98px) {
+@media screen and (max-width:425.98px) and (min-width:365.98px) {
     
     div.image-logo {
-        width: 46%; 
-        height: 145px !important;
+        width: 44%; 
+        aspect-ratio: 1/1;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     div.table-player {
-        width: 52.7%;
+        width: 54.6%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        width: 102.5% !important;
-        height: 102.5%;
+        height: 103% !important;
+        aspect-ratio: 1/1;
         padding: 0;
     }
     section.info h2{
@@ -293,7 +293,7 @@ td.name{
     }
     table td{
         background-color: #08142c !important;
-        font-size: 16px;
+        font-size: 16.7px;
     }
     div.button-choose{
         display: flex;
