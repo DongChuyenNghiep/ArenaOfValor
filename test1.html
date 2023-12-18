@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="test2.html#byebye" id="link">Click here</a>
+
+    <script>
+        // Function to handle the click event
+        document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('link');
+
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var href = this.getAttribute('href');
+                var hash = href.split('#')[1];
+
+                // Store hash value in sessionStorage
+                sessionStorage.setItem('hashValue', hash);
+
+                // Redirect to the href
+                window.location.href = href;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="groupA" class="hideable">Hello world</div>
+    <div id="byebye" class="hideable">Hello world</div>
+    <div id="byebye" class="hideable">Hello world</div>
+    <div id="byebye" class="hideable">Hello world</div>
+    <div id="byebye1" class="hideable">Hello world</div>
+    <div id="byebye" class="hideable">Hello world</div>
+    <div id="hello" class="hideable">Bye bye</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve hash value from sessionStorage
+            var hash = sessionStorage.getItem('hashValue');
+
+            var hideableElements = document.getElementsByClassName('hideable');
+            for (var i = 0; i < hideableElements.length; i++) {
+                if (hideableElements[i].id === hash) {
+                    hideableElements[i].style.display = 'block';
+                } else {
+                    hideableElements[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
