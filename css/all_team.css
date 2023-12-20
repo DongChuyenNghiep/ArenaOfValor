@@ -353,10 +353,12 @@ td.name{
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
-    
+    table.table-player{
+        border: none;
+    }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 103% !important;
+        height: 102.47% !important;
         aspect-ratio: 1/1;
         padding: 0;
     }
