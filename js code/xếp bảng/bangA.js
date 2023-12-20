@@ -1,6 +1,6 @@
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
 let SHEET_TITLE = 'Xếp vòng bảng';
-let SHEET_RANGE_A_1 = 'A1:B4';
+let SHEET_RANGE_A_1 = 'A1:C4';
 
 let FULL_URL_TABLE_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 
@@ -23,7 +23,7 @@ image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1
 function updateTextContentA() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
       cell2.textContent = rowData[1].v;
 
     } else {

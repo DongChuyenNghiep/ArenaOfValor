@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_C_1 = 'E1:F4';
+let SHEET_RANGE_C_1 = 'G1:I4';
 
 let FULL_URL_TABLE_C = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_C_1}`;
 
@@ -22,7 +22,7 @@ image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1
 function updateTextContentA() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
       cell2.textContent = rowData[1].v;
 
     } else {
