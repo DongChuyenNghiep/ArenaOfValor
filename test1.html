@@ -6,25 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="test2.html#byebye" id="link">Click here</a>
+    <a href="test2.html#groupA" class="link">Click here for Group A</a>
+    <a href="test2.html#groupB" class="link">Click here for Group B</a>
+    <a href="test2.html#groupC" class="link">Click here for Group C</a>
+    <a href="test2.html#groupD" class="link">Click here for Group D</a>
+    <a href="test2.html#groupE" class="link">Click here for Group E</a>
+    <a href="test2.html#groupF" class="link">Click here for Group F</a>
 
     <script>
         // Function to handle the click event
         document.addEventListener('DOMContentLoaded', function() {
-            var link = document.getElementById('link');
+            var links = document.getElementsByClassName('link');
 
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function(event) {
+                    event.preventDefault();
 
-                var href = this.getAttribute('href');
-                var hash = href.split('#')[1];
+                    var href = this.getAttribute('href');
+                    var hash = href.split('#')[1];
 
-                // Store hash value in sessionStorage
-                sessionStorage.setItem('hashValue', hash);
+                    // Store hash value in sessionStorage
+                    sessionStorage.setItem('hashValue', hash);
 
-                // Redirect to the href
-                window.location.href = href;
-            });
+                    // Redirect to the href
+                    window.location.href = href;
+                });
+            }
         });
     </script>
 </body>
