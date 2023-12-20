@@ -190,13 +190,16 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height:103%;
+        height:102.51%;
         aspect-ratio: 1/1;
         padding: 0;
     }
     div.box1:last-child{
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    table.table-player{
+        border: none;
     }
     /* Rest of your CSS styles */
     div.rowbox {
@@ -240,6 +243,9 @@ td.name{
     div.image-logo:hover img{
         display: block;
     
+    }
+    h2{
+        font-size: 25px;
     }
 
 
