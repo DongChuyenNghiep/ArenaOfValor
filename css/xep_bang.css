@@ -4,7 +4,10 @@ body{
     background-color: #08142c;
     color: white;
 }
-
+.info p.note{
+    text-align: center;
+    padding-bottom: 10px;
+}
 div.all-team{
     padding-top: 200px;
     margin: 0 auto;
@@ -17,7 +20,7 @@ div.row{
 section.info h2{
     text-align: center;
     font-weight: 700;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 div.group{
     width: 21%;
@@ -164,7 +167,7 @@ div.group a{
         font-size: 19px;
     }
     .team-logo{
-        height: 80px;
+        height: 70px;
         aspect-ratio: 1/1;
         padding: 7px;
     }
@@ -190,7 +193,7 @@ div.group a{
         font-size: 19px;
     }
     .team-logo{
-        height: 75px;
+        height: 65px;
         aspect-ratio: 1/1;
         padding: 7px;
     }
