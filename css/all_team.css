@@ -251,21 +251,25 @@ td.name{
         margin-bottom: 9px;
     }
     div.image-logo {
-        width: 39%; 
+        width: 40%; 
+        padding: 0;
         aspect-ratio: 1/1;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     div.table-player {
-        width: 59.7%;
+        width: 58.7%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+    }
+    table.table-player{
+        border: none;
     }
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 103% !important;
+        height: 102.7% !important;
         aspect-ratio: 1/1;
         padding: 0;
     }
@@ -302,7 +306,7 @@ td.name{
     }
     table td{
         background-color: #08142c !important;
-        font-size: 16.4px;
+        font-size: 16.8px;
     }
     div.button-choose{
         display: flex;
