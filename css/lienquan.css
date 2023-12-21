@@ -671,6 +671,14 @@ h3 {
     tbody {
         width: 95%;
     }
+    .luat-tinh-diem a{
+        padding: 0;
+        text-decoration: underline;
+        background-color: #5800bc;
+        border: none;
+        margin-left: 30px;
+        color: #f0ab58;
+    }
     button.navbar-toggler.color-expand{
         color: white !important;
         font-size: 24px;
