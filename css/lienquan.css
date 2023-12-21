@@ -641,32 +641,31 @@ h3 {
     }
 
     .first-col {
-        background-color: #041e4d;
+        background-color: #5800bc;
         left: 0;
 
     }
 
     .second-col {
-        background-color: #041e4d;
-        left: 14.5%;
+        background-color: #5800bc;
+        left: 14.6%;
 
     }
 
     .sec-col {
-        background-color: #041e4d;
-        left: 14.5%;
+        background-color: #5800bc;
+        left: 14.6%;
         box-shadow: 10px;
 
 
     }
     td {
-        padding: 0 50px;
+        padding: 0 40px;
     }
-
     td:nth-child(1),
     td:nth-child(2) {
         padding: 0 10px;
-        background-color: #041e4d;
+        background-color: #5800bc;
     }
 
     tbody {
