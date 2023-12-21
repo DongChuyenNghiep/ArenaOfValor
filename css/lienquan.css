@@ -115,7 +115,7 @@ div.table_rank_A {
     margin-left: 80px;
     justify-content: center;
 }
-#wordBox {
+.wordBox {
     display: none;
     border: 1px solid #ccc;
     padding: 10px;
@@ -124,11 +124,11 @@ div.table_rank_A {
     width: 70%;
     transition: max-height 0.3s ease-in-out;
   }
-#wordBox p{
+.wordBox p{
     margin: 0;
     font-style: italic;
   }
-  #wordBox span{
+ .wordBox span{
     font-style: normal;
   }
 tr.title {
@@ -494,8 +494,8 @@ h3 {
     .luat-tinh-diem{
         margin: 0;
     }
-    #wordBox{
-        width: 95%;
+    .wordBox{
+        width: 100%;
         font-size: 14px;
     }
 
