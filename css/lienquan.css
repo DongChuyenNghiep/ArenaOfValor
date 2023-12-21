@@ -2,6 +2,9 @@
     height: 70px;
 
 }
+body{
+    font-family: 'Nunito';
+}
 a.focusable-link.focus{
     color:  #e5871f;
 }
@@ -99,18 +102,6 @@ table.my-table {
 
 }
 
-.group {
-    display: none;
-}
-
-.groupA,
-.groupB {
-    display: none;
-}
-
-.visible {
-    display: block !important;
-}
 
 th {
     padding: 5px 0 15px 0;
@@ -120,13 +111,37 @@ div.table_rank_A {
     overflow-x: auto;
     overflow-y: auto;
 }
-
-
-
+.luat-tinh-diem{
+    margin-left: 80px;
+    justify-content: center;
+}
+#wordBox {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: grey;
+    width: 70%;
+    transition: max-height 0.3s ease-in-out;
+  }
+#wordBox p{
+    margin: 0;
+    font-style: italic;
+  }
+  #wordBox span{
+    font-style: normal;
+  }
 tr.title {
     border-left: none;
 }
-
+.luat-tinh-diem a{
+    text-decoration: none;
+    color: white;
+    background-color: #08142c;
+    padding: 12px;
+    border: 1px white solid;
+    border-radius: 5px;
+}
 td:nth-child(1) {
     text-align: right;
     width: 8%;
@@ -219,8 +234,6 @@ span.gach {
 span.gach {
     margin: 0 5px;
 }
-
-
 
 span.winner {
     font-size: 14px;
@@ -476,6 +489,14 @@ h3 {
 @media screen and (max-width:765.98px) {
     a.disabled {
         position: static;
+    }
+
+    .luat-tinh-diem{
+        margin: 0;
+    }
+    #wordBox{
+        width: 95%;
+        font-size: 14px;
     }
 
     .nav1 {

@@ -8,7 +8,7 @@
     <title>Vòng bảng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/test2.css">
+    <link rel="stylesheet" href="css/lienquan.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/x-icon" href="/image/logo.png" />
 </head>
@@ -24,7 +24,7 @@
                 aria-label="Toggle navigation">
                 &#9776;
             </button>
-            <div class= "collapse navbar-collapse" id="navbarNav1" style="justify-content: center; align-items: center;">
+            <div class="collapse navbar-collapse" id="navbarNav1" style="justify-content: center; align-items: center;">
                 <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link focusable-link" aria-current="page" href="index.html">Home</a>
@@ -42,17 +42,18 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg nav2" >
+    <nav class="navbar navbar-expand-lg nav2">
         <div class="container-fluid">
             <button class="navbar-toggler color-expand" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 &#9776; Chọn vòng
             </button>
-            <div class= "collapse navbar-collapse" id="navbarNav2">
+            <div class="collapse navbar-collapse" id="navbarNav2">
                 <ul class="navbar-nav" style="margin: 0 auto !important;">
                     <li class="nav-item">
-                        <a class="nav-link focusable-link" aria-current="page" href="AOVvongxepseed.html">Xếp hạt giống (38)</a>
+                        <a class="nav-link focusable-link" aria-current="page" href="AOVvongxepseed.html">Xếp hạt giống
+                            (38)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link focusable-link" href="AOVbracket-play-in.html">Play-in (8)</a>
@@ -61,7 +62,8 @@
                         <a class="nav-link focusable-link" href="xep_bang.html">Vòng bảng (32)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link focusable-link" style="filter: brightness(60%);" href="#">Vòng play-off (16)</a>
+                        <a class="nav-link focusable-link" style="filter: brightness(60%);" href="#">Vòng play-off
+                            (16)</a>
                     </li>
                 </ul>
             </div>
@@ -79,12 +81,13 @@
         <a href="#groupH" class="w3-bar-item w3-button linkElements">GROUP H</a>
 
     </div>
-    
+
     <!--Phan A-->
     <div id="groupA" class="group groupA hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -102,6 +105,22 @@
 
             <div class="table_rank_A">
                 <h3> BẢNG XẾP HẠNG NHÓM A</h3>
+                <div class="luat-tinh-diem">
+                <a href="#" id="showWords">Quy tắc xếp hạng</a>
+                <div id="wordBox">
+                    <ol>
+                        <li>Điểm số này sẽ dựa trên số trận thắng. Thắng được 3 điểm, thua 0 điểm.</li>
+                        <li>Xếp hạng sẽ dựa trên số điểm team bạn đang có.</li>
+                        <li>Nếu có 2,3 hoặc 4 đội cùng điểm số thì sẽ dựa trên hiệu số (Kill - Dead) để xét. Nếu hiệu
+                            số bằng nhau thì sẽ xét tới số kill tổng của đội.</li>
+                        <li>Nếu hiệu số, số kill của 2 đội (3 hoặc 4 đội) bằng nhau thì sẽ có thêm các trận Tiebreak
+                            để xác định thứ hạng cuối cùng.</li>
+                        <li>Trận Tiebreak diễn ra ngay sau khi trận cuối của bảng đấu hoàn tất. Mọi người sẽ được nghỉ
+                            10 min trước khi bắt đầu lượt đấu Tiebreak.</li>
+                    </ol>
+                    <p><span>⚠️Lưu ý: </span>Lượt Tiebreak chỉ dành cho các đội tranh hạng 1 hoặc tranh hạng 2.</p>
+                </div>
+            </div>
                 <div class="wrapper">
                     <table class=" my-table">
                         <thead>
@@ -130,7 +149,8 @@
     <div id="groupB" class="group groupB hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -177,7 +197,8 @@
     <div id="groupC" class="group groupC hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -224,7 +245,8 @@
     <div id="groupD" class="group groupD hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -272,7 +294,8 @@
     <div id="groupE" class="group groupE hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -319,7 +342,8 @@
     <div id="groupF" class="group groupF hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -366,7 +390,8 @@
     <div id="groupG" class="group groupG hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -413,7 +438,8 @@
     <div id="groupH" class="group groupH hideable">
 
         <div class="w3-teal">
-            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn bảng</button>
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="w3" onclick="w3_open()">&#9776; Chọn
+                bảng</button>
         </div>
 
         <div class="w3-container">
@@ -455,7 +481,7 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Retrieve hash value from sessionStorage
             var hash = sessionStorage.getItem('hashValue');
 
@@ -469,6 +495,24 @@
             }
         });
     </script>
+    <script>
+        // JavaScript to show/hide the box on link click
+        const wordBox = document.getElementById('wordBox');
+        const showWords = document.getElementById('showWords');
+        let isBoxVisible = false;
+    
+        showWords.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent the default behavior of the link
+    
+          if (isBoxVisible) {
+            wordBox.style.display = 'none'; // Hide the box
+          } else {
+            wordBox.style.display = 'block'; // Show the box
+          }
+    
+          isBoxVisible = !isBoxVisible; // Toggle the state
+        });
+      </script>
     <script src="js code/sidebar.js"></script>
     <script src="js code/focus_link_1.js"></script>
     <script src="js code/choose_table/chooseA.js"></script>
