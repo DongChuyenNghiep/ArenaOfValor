@@ -268,7 +268,7 @@ td.name{
     }
     
     div.table-player {
-        width: 58.7%;
+        width: 60%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
@@ -278,7 +278,7 @@ td.name{
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 102.7% !important;
+        height: 100% !important;
         aspect-ratio: 1/1;
         padding: 0;
     }
@@ -315,7 +315,7 @@ td.name{
     }
     table td{
         background-color: #08142c !important;
-        font-size: 16.8px;
+        font-size: 16.34px;
     }
     div.button-choose{
         display: flex;
