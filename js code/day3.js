@@ -29,7 +29,7 @@ fetch(FULL_URL_3)
       // Create an image element for the team logo
       let img1 = document.createElement('img');
       img1.classList.add('team-logo');
-      img1.src = "/"+rowData[0].v; // Set the image source from the data
+      img1.src = rowData[0].v; // Set the image source from the data
       img1.alt = rowData[1].v + ' Logo'; // Set the alt text based on the team name
       teamDiv1.appendChild(img1);
       let span1 = document.createElement('span');
@@ -93,7 +93,7 @@ fetch(FULL_URL_3)
       // Create an image element for the team logo
       let img2 = document.createElement('img');
       img2.classList.add('team-logo');
-      img2.src = "/"+rowData[7].v; // Set the image source from the data
+      img2.src = rowData[7].v; // Set the image source from the data
       img2.alt = rowData[6].v + ' Logo'; // Set the alt text based on the team name
       teamDiv2.appendChild(img2);
 
