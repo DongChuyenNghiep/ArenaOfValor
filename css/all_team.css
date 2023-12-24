@@ -620,14 +620,15 @@ td.name{
         border-left: 0.5px solid white;
     }
     div.table-player {
-        width: 60.6%;
+        width: 62%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+        height: 125.24px;
     }
     
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 103.73% !important;
+        height: 100% !important;
         aspect-ratio: 1/1;
         padding: 0;
     }
@@ -658,7 +659,7 @@ td.name{
     }
     table td{
         background-color: #08142c !important;
-        font-size: 13.9px;
+        font-size: 13.5px;
     }
     div.button-choose{
         display: flex;
