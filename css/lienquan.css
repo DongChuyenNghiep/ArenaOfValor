@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Nunito);
 .team-logo {
     height: 70px;
 
@@ -112,9 +113,6 @@ tr.title th{
     text-align: center;
     padding-bottom: 5px;
 }
-div.team-right{
-    margin-top: 20px;
-}
 th {
     padding: 5px 0 15px 0;
 }
@@ -130,9 +128,7 @@ div.table_rank_A {
 .wordBox1 {
     display: none;
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: grey;
+    margin-top: 10px;  
     width: 100%;
     transition: max-height 0.3s ease-in-out;
   }
@@ -210,10 +206,11 @@ body {
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 7px 20px;
+
 }
 .row1{
     display: flex;
+    padding: 7px 20px;
 }
 
 .loser-darker {

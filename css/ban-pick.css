@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Nunito);
 div.ban,
 div.pick {
     display: flex;
@@ -44,7 +45,18 @@ div.ban-pick {
     transform-origin: center;
     z-index: 1;
 }
-
+p.team-name{
+    padding-top: 10px;
+    font-family: 'Nunito';
+}
 .ban-box:nth-child(5){
     display: none;
+}
+.team-left{
+    background-color: rgb(97, 97, 248);
+}
+
+.team-right{
+    background-color: rgb(255, 130, 130);
+    
 }
