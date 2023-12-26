@@ -114,7 +114,7 @@ fetch(FULL_URL_A_1)
       // Create an image element for the team logo
       let img2 = document.createElement('img');
       img2.classList.add('team-logo');
-      img2.src = +rowData[7].v; // Set the image source from the data
+      img2.src = rowData[7].v; // Set the image source from the data
       img2.alt = rowData[6].v + ' Logo'; // Set the alt text based on the team name
       teamDiv2.appendChild(img2);
 
@@ -166,6 +166,18 @@ fetch(FULL_URL_A_1)
       let team1 = document.createElement('p');
       team1.classList.add('team-name');
       team1.textContent = rowData[1].v;
+      let ban_pick = document.createElement('div');
+      ban_pick.classList.add('ban-pick');
+      let ban_left = document.createElement('div');
+      ban_left.classList.add('ban');
+      ban_pick.appendChild(ban_left);
+      let ban_box_left_1 = document.createElement('div');
+      ban_box_left_1.classList.add('ban-box');
+      ban_left.appendChild(ban_box_left_1);
+      let cross_ban= document.createElement('div');
+      cross_ban.classList.add('line');
+      ban_box_left_1.appendChild(cross_ban);
+      team_left.appendChild(ban_pick);
       let table_left = document.createElement('table');
       table_left.classList.add('team1');
       let thead_left = document.createElement('thead');

@@ -6,25 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div.ban {
+        div.ban,
+        div.pick {
             display: flex;
+            margin-right: 20px;
 
         }
 
-        .ban-box {
+        div.ban-pick {
+            display: flex;
+        }
+
+        .ban-box,
+        .pick-box {
             border: 0.5px black solid;
-            width: 30px;
+            width: 35px;
             aspect-ratio: 1/1;
             position: relative;
             /* Để có thể định vị phần tử con */
         }
 
-        img {
+        .ban img {
             width: 100%;
             display: block;
             /* Để hình ảnh hiển thị đúng */
-            filter: brightness(70%);
+            filter: brightness(75%);
             /* Điều chỉnh độ sáng của hình ảnh */
+        }
+
+        .pick img {
+            width: 100%;
+            display: block;
         }
 
         .ban-box::before {
@@ -43,26 +55,74 @@
 </head>
 
 <body>
-    <div class="ban">
-        <div class="ban-box">
-            <div class="line"></div>
-            <img src="heroes/53600.webp" alt="">
-        </div>
-        <div class="ban-box">
-            <div class="line"></div>
-            <img src="heroes/kaine.webp" alt="">
-        </div>
-        <div class="ban-box">
-            <div class="line">
-                <img src="heroes/Zill.webp" alt="">
+    <div class="ban-pick" id="ban-pick-left">
+        <div class="ban">
+            <div class="ban-box">
+                <div class="line"></div>
+                <img src="" alt="">
+            </div>
+            <div class="ban-box">
+                <div class="line"></div>
+                <img src="" alt="">
+            </div>
+            <div class="ban-box">
+                <div class="line"></div>
+                <img src="" alt="">
+
+            </div>
+            <div class="ban-box">
+                <div class="line"></div>
+                <img src="" alt="">
             </div>
         </div>
-        <div class="ban-box">
-            <div class="line"></div>
+        <div class="pick">
+            <div class="pick-box">
+                <img src="">
+            </div>
+            <div class="pick-box">
+                <img src="">
+            </div>
+            <div class="pick-box">
+                <img src="">
+            </div>
+            <div class="pick-box">
+                <img src="">
+            </div>
+            <div class="pick-box">
+                <img src="">
+            </div>
         </div>
     </div>
+    <script>
 
-    <div class="box"></div>
+        let SHEET_RANGE_A = 'H3:I7';
+        let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
+        let SHEET_TITLE_QUALIFIER = 'KDA test'
+        let FULL_URL_A_1 = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_A}`;
+
+        fetch(FULL_URL_A_1)
+            .then((res) => res.text())
+            .then((rep) => {
+                let data = JSON.parse(rep.substr(47).slice(0, -2));
+                let dataBody = document.getElementById('ban-pick-left');
+                let banBoxes = document.querySelectorAll('.ban-box'); // Select all elements with the class 'ban-box'
+                for (let i = 0; i < data.table.rows.length-1; i++) {
+                    let rowData = data.table.rows[i].c;
+                    let imgElement = banBoxes[i].querySelector('img'); // Select the img inside the specific '.ban-box'
+                    if (imgElement) {
+                        imgElement.src = 'heroes/' + rowData[0].v + '.webp'; // Assuming the 'v' property is at index 0
+                    }
+                }
+                let pickbox = document.querySelectorAll('.pick-box');
+                for (let i = 0; i < data.table.rows.length; i++) {
+                    let rowData = data.table.rows[i].c;
+                    let imgElement = pickbox[i].querySelector('img'); // Select the img inside the specific '.ban-box'
+                    if (imgElement) {
+                        imgElement.src = 'heroes/' + rowData[1].v + '.webp'; // Assuming the 'v' property is at index 0
+                    }
+                }
+            });
+    </script>
 </body>
 
 </html>
