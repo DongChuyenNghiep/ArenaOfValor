@@ -20,6 +20,9 @@ nav{
 a.disabled {
     position: fixed;
 }
+a.showWords{
+    text-decoration: none;
+}
 
 .team-name {
     font-weight: bold;
@@ -102,7 +105,16 @@ table.my-table {
 
 }
 
-
+.team-name{
+    text-align: center;
+}
+tr.title th{
+    text-align: center;
+    padding-bottom: 5px;
+}
+div.team-right{
+    margin-top: 20px;
+}
 th {
     padding: 5px 0 15px 0;
 }
@@ -115,7 +127,16 @@ div.table_rank_A {
     margin-left: 80px;
     justify-content: center;
 }
-.wordBox {
+.wordBox1 {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: grey;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .wordBox{
     display: none;
     border: 1px solid #ccc;
     padding: 10px;
@@ -124,6 +145,14 @@ div.table_rank_A {
     width: 70%;
     transition: max-height 0.3s ease-in-out;
   }
+  .wordBox1 table {
+    width: 100%;
+}
+
+.wordBox1 table td {
+    text-align: center;
+    width: 17%;
+}
 .wordBox p{
     margin: 0;
     font-style: italic;
@@ -174,15 +203,17 @@ body {
     font: 17px;
 }
 
-.row1 {
-    display: flex;
+.row2 {
     align-items: center;
     border: 1px solid #ccc;
-    width: 85%;
+    width: 90%;
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
     padding: 7px 20px;
+}
+.row1{
+    display: flex;
 }
 
 .loser-darker {
