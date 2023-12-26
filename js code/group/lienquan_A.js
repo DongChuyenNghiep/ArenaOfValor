@@ -184,6 +184,9 @@ fetch(FULL_URL_A_1)
       let ban_box_left_4 = document.createElement('div');
       ban_box_left_4.classList.add('ban-box','ban-box-left');
       ban_left.appendChild(ban_box_left_4);
+      let ban_box_left_5 = document.createElement('div');
+      ban_box_left_5.classList.add('ban-box','ban-box-left');
+      ban_left.appendChild(ban_box_left_5);
       let cross_ban = document.createElement('div');
       cross_ban.classList.add('line');
       let image = document.createElement('img');
@@ -191,10 +194,12 @@ fetch(FULL_URL_A_1)
       ban_box_left_2.appendChild(cross_ban.cloneNode(true));
       ban_box_left_3.appendChild(cross_ban.cloneNode(true));
       ban_box_left_4.appendChild(cross_ban.cloneNode(true));
+      ban_box_left_5.appendChild(cross_ban.cloneNode(true));
       ban_box_left_1.appendChild(image.cloneNode(true));
       ban_box_left_2.appendChild(image.cloneNode(true));
       ban_box_left_3.appendChild(image.cloneNode(true));
       ban_box_left_4.appendChild(image.cloneNode(true));
+      ban_box_left_5.appendChild(image.cloneNode(true));
       let pick_left = document.createElement('div');
       pick_left.classList.add('pick');
       ban_pick_left.appendChild(pick_left);
@@ -266,16 +271,22 @@ fetch(FULL_URL_A_1)
       ban_box_right_3.classList.add('ban-box','ban-box-right');
       ban_right.appendChild(ban_box_right_3);
       let ban_box_right_4 = document.createElement('div');
-      ban_right.appendChild(ban_box_right_4);
       ban_box_right_4.classList.add('ban-box','ban-box-right');
+      ban_right.appendChild(ban_box_right_4);
+      let ban_box_right_5 = document.createElement('div');
+      ban_box_right_5.classList.add('ban-box','ban-box-right');
+      ban_right.appendChild(ban_box_right_5);
+      
       ban_box_right_1.appendChild(cross_ban.cloneNode(true));
       ban_box_right_2.appendChild(cross_ban.cloneNode(true));
       ban_box_right_3.appendChild(cross_ban.cloneNode(true));
       ban_box_right_4.appendChild(cross_ban.cloneNode(true));
+      ban_box_right_5.appendChild(cross_ban.cloneNode(true));
       ban_box_right_1.appendChild(image.cloneNode(true));
       ban_box_right_2.appendChild(image.cloneNode(true));
       ban_box_right_3.appendChild(image.cloneNode(true));
       ban_box_right_4.appendChild(image.cloneNode(true));
+      ban_box_right_5.appendChild(image.cloneNode(true));
       let pick_right = document.createElement('div');
       pick_right.classList.add('pick');
       ban_pick_right.appendChild(pick_right);

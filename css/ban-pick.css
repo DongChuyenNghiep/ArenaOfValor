@@ -44,3 +44,7 @@ div.ban-pick {
     transform-origin: center;
     z-index: 1;
 }
+
+.ban-box:nth-child(5){
+    display: none;
+}
