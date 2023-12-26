@@ -1,0 +1,46 @@
+div.ban,
+div.pick {
+    display: flex;
+    margin-right: 20px;
+
+}
+
+div.ban-pick {
+    display: flex;
+}
+
+.ban-box,
+.pick-box {
+    border: 0.5px black solid;
+    width: 45px;
+    aspect-ratio: 1/1;
+    position: relative;
+    margin-left: 3px;
+    /* Để có thể định vị phần tử con */
+}
+
+.ban img {
+    width: 100%;
+    display: block;
+    /* Để hình ảnh hiển thị đúng */
+    filter: brightness(75%);
+    /* Điều chỉnh độ sáng của hình ảnh */
+}
+
+.pick img {
+    width: 100%;
+    display: block;
+}
+
+.ban-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    z-index: 1;
+}

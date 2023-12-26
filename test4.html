@@ -93,6 +93,7 @@
             </div>
         </div>
     </div>
+    <div class="ban-pick" id="ban-pick-left"><div class="ban"><div class="ban-box"></div><div class="ban-box"></div><div class="ban-box"></div><div class="ban-box"><img src="heroes/Gildur.webp"><div class="line"></div></div></div></div>
     <script>
 
         let SHEET_RANGE_A = 'H3:I7';
@@ -104,7 +105,6 @@
             .then((res) => res.text())
             .then((rep) => {
                 let data = JSON.parse(rep.substr(47).slice(0, -2));
-                let dataBody = document.getElementById('ban-pick-left');
                 let banBoxes = document.querySelectorAll('.ban-box'); // Select all elements with the class 'ban-box'
                 for (let i = 0; i < data.table.rows.length-1; i++) {
                     let rowData = data.table.rows[i].c;
