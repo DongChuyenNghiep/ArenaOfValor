@@ -1,5 +1,5 @@
 function show() {
-    const showWordsElements = document.querySelectorAll('.showWords');
+    const showWordsElements = document.querySelectorAll('.showWords1');
     const wordBoxElements = document.querySelectorAll('.wordBox1');
     const isBoxVisible = Array.from({ length: showWordsElements.length }).fill(false);
   

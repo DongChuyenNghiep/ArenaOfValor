@@ -13,7 +13,7 @@ fetch(FULL_URL_D)
       let rowData = data.table.rows[i].c;
       let link = document.createElement('a');
       link.href = '#';
-      link.classList.add('showWords')
+      link.classList.add('showWords1')
 
 
       let rowDiv = document.createElement('div');
