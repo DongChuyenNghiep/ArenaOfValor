@@ -15,7 +15,10 @@ fetch(FULL_URL_G)
       link.href = '#';
       link.classList.add('showWords1')
 
-
+      let match = document.createElement('h6')
+      match.textContent = rowData[8].v;
+      match.classList.add('match');
+      dataBody.appendChild(match)
       let rowDiv = document.createElement('div');
       rowDiv.classList.add('row2');
       // Create a container div for each row

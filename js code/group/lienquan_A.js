@@ -14,6 +14,11 @@ fetch(FULL_URL_A_1)
 
     for (let i = 0; i < data.table.rows.length; i++) {
       let rowData = data.table.rows[i].c;
+      let match = document.createElement('h6')
+      match.textContent = rowData[8].v;
+      match.classList.add('match');
+      dataBody.appendChild(match)
+      
       let link = document.createElement('a');
       link.href = '#';
       link.classList.add('showWords1')
