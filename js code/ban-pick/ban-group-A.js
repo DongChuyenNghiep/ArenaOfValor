@@ -30,5 +30,5 @@ function banpickA() {
     fetchDataAndUpdate();
 
     // Set interval to fetch data periodically (every 10 seconds in this example)
-    setInterval(fetchDataAndUpdate, 1); // Adjust the interval as needed
+    setInterval(fetchDataAndUpdate, 500); // Adjust the interval as needed
 }

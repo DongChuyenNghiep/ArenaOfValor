@@ -1,10 +1,10 @@
 function banpickE(){
-    let SHEET_TITLE_BAN_E = 'Group E'
-    let SHEET_RANGE = 'H3:I133';
     let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-        let FULL_URL_E = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_BAN_E}&range=${SHEET_RANGE}`;
-
-    fetch(FULL_URL_E)
+    let SHEET_RANGE = 'H3:I133';
+    let SHEET_TITLE_BAN_E = 'Group E'
+    let FULL_URL_E = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_BAN_E}&range=${SHEET_RANGE}`;
+    function fetchDataAndUpdate() {
+        fetch(FULL_URL_E)
         .then((res) => res.text())
         .then((rep) => {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
@@ -19,7 +19,14 @@ function banpickE(){
                     pickimgElement.src = 'heroes/' + rowData[1].v + '.webp'; // Assuming the 'v' property is at index 0
                 }
             }
+        })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
+        }
 
+        fetchDataAndUpdate();
 
-        });
+        // Set interval to fetch data periodically (every 10 seconds in this example)
+        setInterval(fetchDataAndUpdate, 500); // Adjust the interval as needed
 }

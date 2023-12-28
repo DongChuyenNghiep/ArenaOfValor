@@ -3,7 +3,7 @@ function banpickB(){
     let SHEET_RANGE = 'H3:I133';
     let SHEET_TITLE_BAN_B = 'Group B'
     let FULL_URL_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_BAN_B}&range=${SHEET_RANGE}`;
-
+    function fetchDataAndUpdate() {
         fetch(FULL_URL_B)
         .then((res) => res.text())
         .then((rep) => {
@@ -19,7 +19,14 @@ function banpickB(){
                     pickimgElement.src = 'heroes/' + rowData[1].v + '.webp'; // Assuming the 'v' property is at index 0
                 }
             }
+        })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
+        }
 
+        fetchDataAndUpdate();
 
-        });
+        // Set interval to fetch data periodically (every 10 seconds in this example)
+        setInterval(fetchDataAndUpdate, 500); // Adjust the interval as needed
 }
