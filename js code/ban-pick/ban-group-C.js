@@ -1,6 +1,6 @@
-function banpickC(){
-    let SHEET_TITLE_BAN_C = 'Group C'
-    let SHEET_RANGE = 'H3:I133';
+function banpickC() {
+    let SHEET_TITLE_BAN_C = 'Group C';
+    let SHEET_RANGE = 'H3:I122';
     let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
     let FULL_URL_C = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_BAN_C}&range=${SHEET_RANGE}`;
 

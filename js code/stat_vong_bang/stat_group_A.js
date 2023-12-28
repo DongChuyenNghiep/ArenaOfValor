@@ -1,65 +1,64 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-    SHEET_RANGE_TABLE = 'B3:G122';
-    const SHEET_TITLE_DAY_A = 'Group A';
-    const SHEET_TITLE_DAY_B = 'Group B';
-    const SHEET_TITLE_DAY_C = 'Group C';
-    const SHEET_TITLE_DAY_D = 'Group D';
-    const SHEET_TITLE_DAY_E = 'Group E';
-    const SHEET_TITLE_DAY_F = 'Group F';
-    const SHEET_TITLE_DAY_G = 'Group G';
-    const SHEET_TITLE_DAY_H = 'Group H';
-
-    function createTableRows(startIndex, targetID, data) {
-        const dataBody = document.getElementById(targetID);
-        if (!dataBody || !data || !data.table || !data.table.rows) {
-            console.error('Invalid data or target element.');
-            return;
-        }
-        for (let i = startIndex; i < startIndex + 5; i++) {
-            let rowData = data.table.rows[i]?.c; // Using optional chaining to handle potential undefined rows
-            if (!rowData) {
-                console.error('Invalid row data.');
-                continue;
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const fetchAndCreateTableRows = async (fullURL, startIndex, targetID) => {
+            const res = await fetch(fullURL);
+            if (!res.ok) {
+                throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
             }
-            let row = document.createElement('tr');
-            for (let j = 0; j < rowData.length; j++) {
-                let cell = document.createElement('td');
-                cell.textContent = rowData[j]?.v || ''; // Using optional chaining to handle potential undefined cell values
-                row.appendChild(cell);
-            }
-            dataBody.appendChild(row);
-        }
-    }
-    
-    function fetchDataAndCreateTables(sheetTitle, groupPrefix) {
-        
-        const fullURL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${sheetTitle}&range=${SHEET_RANGE_TABLE}`;
-        
-        fetch(fullURL)
-            .then((res) => res.text())
-            .then((rep) => {
-                try {
-                    let data = JSON.parse(rep.substr(47).slice(0, -2));
-                    for (let i = 0; i < 12; i++) {
-                        createTableRows(i * 10, `team-left-${groupPrefix}-${i + 1}`, data);
-                        createTableRows((i * 10) + 5, `team-right-${groupPrefix}-${i + 1}`, data);
-                    }
-                } catch (error) {
-                    console.error("Error while processing data:", error);
+            const rep = await res.text();
+            const data = JSON.parse(rep.substr(47).slice(0, -2));
+            const dataBody = document.getElementById(targetID);
+            
+            for (let i = startIndex; i < startIndex + 5; i++) {
+                const rowData = data.table.rows[i].c;
+                const row = document.createElement('tr');
+                
+                for (let j = 0; j < rowData.length; j++) {
+                    const cell = document.createElement('td');
+                    cell.textContent = rowData[j].v;
+                    row.appendChild(cell);
                 }
-            })
-            .catch((error) => {
-                console.error("Error fetching data:", error);
-            });
+                dataBody.appendChild(row);
+            }
+        };
+
+        const sheets = [
+            { title: 'Group A', range: 'B3:G122', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
+            { title: 'Group B', range: 'B3:G133', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
+            { title: 'Group C', range: 'B3:G122', targetLeft: 'team-left-C-', targetRight: 'team-right-C-' },
+            { title: 'Group D', range: 'B3:G133', targetLeft: 'team-left-D-', targetRight: 'team-right-D-' },
+            { title: 'Group E', range: 'B3:G122', targetLeft: 'team-left-E-', targetRight: 'team-right-E-' },
+            { title: 'Group F', range: 'B3:G133', targetLeft: 'team-left-F-', targetRight: 'team-right-F-' },
+            { title: 'Group G', range: 'B3:G122', targetLeft: 'team-left-G-', targetRight: 'team-right-G-' },
+            { title: 'Group H', range: 'B3:G133', targetLeft: 'team-left-H-', targetRight: 'team-right-H-' },
+            // ... (other groups)
+        ];
+
+        const SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
+        const fetchPromises = sheets.map(async (sheet) => {
+            const fullURL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${sheet.title}&range=${sheet.range}`;
+            
+            const res = await fetch(fullURL);
+            if (!res.ok) {
+                console.error(`Failed to fetch ${sheet.title} data: ${res.status} ${res.statusText}`);
+                return; // Move to the next sheet in case of a fetch failure
+            }
+
+            const rep = await res.text();
+            const data = JSON.parse(rep.substr(47).slice(0, -2));
+            
+            const leftPromises = [];
+            const rightPromises = [];
+            for (let i = 0; i < 12; i++) {
+                leftPromises.push(fetchAndCreateTableRows(fullURL, i * 10, `${sheet.targetLeft}${i + 1}`));
+                rightPromises.push(fetchAndCreateTableRows(fullURL, (i * 10) + 5, `${sheet.targetRight}${i + 1}`));
+            }
+
+            await Promise.all([...leftPromises, ...rightPromises]);
+        });
+
+        await Promise.all(fetchPromises);
+    } catch (error) {
+        console.error('Error occurred:', error);
     }
-    
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_A, 'A');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_B, 'B');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_C, 'C');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_D, 'D');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_E, 'E');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_F, 'F');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_G, 'G');
-    fetchDataAndCreateTables(SHEET_TITLE_DAY_H, 'H');
 });
