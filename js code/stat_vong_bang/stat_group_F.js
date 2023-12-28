@@ -1,7 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
 
-let SHEET_TITLE_DAY = 'Group F';
-let FULL_URL_TABLE_F = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
+document.addEventListener('DOMContentLoaded', function() {
+    let SHEET_RANGE_TABLE = 'B3:G133';
+let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
+let SHEET_TITLE_DAY_F = 'Group B';
+let FULL_URL_BANG_F = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY_F}&range=${SHEET_RANGE_TABLE}`;
 
 
 
@@ -19,13 +21,13 @@ function createTableRows(startIndex, targetID, data) {
     }
 }
 
-fetch(FULL_URL_TABLE_F)
+fetch(FULL_URL_BANG_F)
     .then((res) => res.text())
     .then((rep) => {
         let data = JSON.parse(rep.substr(47).slice(0, -2));
         for (let i = 0; i < 12; i++) {
-            createTableRows(i * 10, `team-left-${i + 1}`, data);
-            createTableRows((i * 10) + 5, `team-right-${i + 1}`, data);
+            createTableRows(i * 10, `team-left-F-${i + 1}`, data);
+            createTableRows((i * 10) + 5, `team-right-F-${i + 1}`, data);
         }
     });
 });

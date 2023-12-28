@@ -1,6 +1,7 @@
-
+document.addEventListener('DOMContentLoaded', function() {
 let SHEET_RANGE_C = 'A44:U55';
-
+let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
+let SHEET_TITLE_QUALIFIER = 'Fixture';
 let FULL_URL_C = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_C}`;
 
 fetch(FULL_URL_C)
@@ -156,19 +157,19 @@ fetch(FULL_URL_C)
       ban_left.classList.add('ban');
       ban_pick_left.appendChild(ban_left);
       let ban_box_left_1 = document.createElement('div');
-      ban_box_left_1.classList.add('ban-box', 'ban-box-left');
+      ban_box_left_1.classList.add('ban-box', 'ban-box-C');
       ban_left.appendChild(ban_box_left_1);
       let ban_box_left_2 = document.createElement('div');
-      ban_box_left_2.classList.add('ban-box', 'ban-box-left');
+      ban_box_left_2.classList.add('ban-box', 'ban-box-C');
       ban_left.appendChild(ban_box_left_2);
       let ban_box_left_3 = document.createElement('div');
-      ban_box_left_3.classList.add('ban-box', 'ban-box-left');
+      ban_box_left_3.classList.add('ban-box', 'ban-box-C');
       ban_left.appendChild(ban_box_left_3);
       let ban_box_left_4 = document.createElement('div');
-      ban_box_left_4.classList.add('ban-box', 'ban-box-left');
+      ban_box_left_4.classList.add('ban-box', 'ban-box-C');
       ban_left.appendChild(ban_box_left_4);
       let ban_box_left_5 = document.createElement('div');
-      ban_box_left_5.classList.add('ban-box', 'ban-box-left');
+      ban_box_left_5.classList.add('ban-box', 'ban-box-C');
       ban_left.appendChild(ban_box_left_5);
       let cross_ban = document.createElement('div');
       cross_ban.classList.add('line');
@@ -242,7 +243,7 @@ fetch(FULL_URL_C)
       let th_thead_left6 = document.createElement('th');
       th_thead_left6.textContent = 'DMG';
       let tbody_left = document.createElement('tbody');
-      tbody_left.id = `team-left-${i + 1}`;
+      tbody_left.id = `team-left-C-${i + 1}`;
       let tr_table_left = document.createElement('tr');
       tr_table_left.classList.add('title');
 
@@ -259,19 +260,19 @@ fetch(FULL_URL_C)
       ban_right.classList.add('ban');
       ban_pick_right.appendChild(ban_right);
       let ban_box_right_1 = document.createElement('div');
-      ban_box_right_1.classList.add('ban-box', 'ban-box-right');
+      ban_box_right_1.classList.add('ban-box', 'ban-box-C');
       ban_right.appendChild(ban_box_right_1);
       let ban_box_right_2 = document.createElement('div');
-      ban_box_right_2.classList.add('ban-box', 'ban-box-right');
+      ban_box_right_2.classList.add('ban-box', 'ban-box-C');
       ban_right.appendChild(ban_box_right_2);
       let ban_box_right_3 = document.createElement('div');
-      ban_box_right_3.classList.add('ban-box', 'ban-box-right');
+      ban_box_right_3.classList.add('ban-box', 'ban-box-C');
       ban_right.appendChild(ban_box_right_3);
       let ban_box_right_4 = document.createElement('div');
-      ban_box_right_4.classList.add('ban-box', 'ban-box-right');
+      ban_box_right_4.classList.add('ban-box', 'ban-box-C');
       ban_right.appendChild(ban_box_right_4);
       let ban_box_right_5 = document.createElement('div');
-      ban_box_right_5.classList.add('ban-box', 'ban-box-right');
+      ban_box_right_5.classList.add('ban-box', 'ban-box-C');
       ban_right.appendChild(ban_box_right_5);
 
       ban_box_right_1.appendChild(cross_ban.cloneNode(true));
@@ -345,7 +346,7 @@ fetch(FULL_URL_C)
       let th_thead_right6 = document.createElement('th');
       th_thead_right6.textContent = 'Damage';
       let tbody_right = document.createElement('tbody');
-      tbody_right.id = `team-right-${i + 1}`;
+      tbody_right.id = `team-right-C-${i + 1}`;
       let tr_table_right = document.createElement('tr');
       tr_table_right.classList.add('title');
 
@@ -393,7 +394,7 @@ fetch(FULL_URL_C)
       dataBody.appendChild(link);
     }
     show();
-    banpick();
+    banpickC();
   });
 
-
+});

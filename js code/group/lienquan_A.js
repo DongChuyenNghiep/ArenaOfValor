@@ -1,9 +1,7 @@
-
-
-
+document.addEventListener('DOMContentLoaded', function(){
 let SHEET_TITLE_QUALIFIER = 'Fixture';
 let SHEET_RANGE_A = 'A4:U15';
-
+let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
 let FULL_URL_A_1 = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_A}`;
 
 fetch(FULL_URL_A_1)
@@ -247,7 +245,7 @@ fetch(FULL_URL_A_1)
       let th_thead_left6 = document.createElement('th');
       th_thead_left6.textContent = 'DMG';
       let tbody_left = document.createElement('tbody');
-      tbody_left.id = `team-left-${i + 1}`;
+      tbody_left.id = `team-left-A-${i + 1}`;
       let tr_table_left = document.createElement('tr');
       tr_table_left.classList.add('title');
 
@@ -350,7 +348,7 @@ fetch(FULL_URL_A_1)
       let th_thead_right6 = document.createElement('th');
       th_thead_right6.textContent = 'Damage';
       let tbody_right = document.createElement('tbody');
-      tbody_right.id = `team-right-${i + 1}`;
+      tbody_right.id = `team-right-A-${i + 1}`;
       let tr_table_right = document.createElement('tr');
       tr_table_right.classList.add('title');
 
@@ -398,5 +396,6 @@ fetch(FULL_URL_A_1)
       dataBody.appendChild(link);
     }
     show();
-    banpick();
+    banpickA();
   });
+});

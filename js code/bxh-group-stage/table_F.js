@@ -1,5 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
 let SHEET_RANGE_F_1 = 'A38:J41';
-
+let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
+let SHEET_TITLE = 'Fixture-group stage';
 let FULL_URL_TABLE_F = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_F_1}`;
 
 fetch(FULL_URL_TABLE_F)
@@ -67,3 +69,4 @@ row.appendChild(cell9);
         dataBody.appendChild(row);
     }
     });
+});
