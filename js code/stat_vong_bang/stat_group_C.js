@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 let SHEET_TITLE_DAY = 'Group C';
-let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
+let FULL_URL_TABLE_C = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
 
 
 
@@ -18,7 +18,7 @@ function createTableRows(startIndex, targetID, data) {
     }
 }
 
-fetch(FULL_URL_TABLE)
+fetch(FULL_URL_TABLE_C)
     .then((res) => res.text())
     .then((rep) => {
         let data = JSON.parse(rep.substr(47).slice(0, -2));

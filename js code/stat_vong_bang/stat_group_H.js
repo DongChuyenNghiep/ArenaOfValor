@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let SHEET_RANGE_TABLE = 'B3:G133';
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
 let SHEET_TITLE_DAY = 'Group H';
-let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
+let FULL_URL_TABLE_H = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
 
 
 
@@ -20,7 +20,7 @@ function createTableRows(startIndex, targetID, data) {
     }
 }
 
-fetch(FULL_URL_TABLE)
+fetch(FULL_URL_TABLE_H)
     .then((res) => res.text())
     .then((rep) => {
         let data = JSON.parse(rep.substr(47).slice(0, -2));
