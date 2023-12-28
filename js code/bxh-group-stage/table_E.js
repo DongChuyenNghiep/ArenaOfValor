@@ -22,7 +22,7 @@ let cell8 = document.createElement('td');
 let cell9 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrc = "/"+rowData[0].v;
+let imageSrc = rowData[0].v;
 let image = document.createElement('img');
 image.src = imageSrc;
 image.classList.add('team-logo')
