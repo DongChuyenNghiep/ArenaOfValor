@@ -695,17 +695,21 @@ td.name{
         aspect-ratio: 1/1;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+
     }
     
     div.table-player {
         width: 60%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+        border-left: 0.5px white solid !important;
         height: 120.68px;
+        
     }
     table.table-player{
         border: none;
         height: 120.68px;
+        
     }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
@@ -784,6 +788,7 @@ td.name{
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
         height: 106.5px;
+        border-left: 0.5px white solid !important;
     }
     
     /* Additional styles for image inside image-logo */
