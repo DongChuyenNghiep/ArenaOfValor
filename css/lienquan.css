@@ -194,7 +194,7 @@ th {
 }
 
 td,
-tr {
+tr,th {
     padding: 5px 0 5px 10px;
 
 }

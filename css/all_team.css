@@ -275,6 +275,7 @@ td.name{
     }
     table.table-player{
         border: none;
+        height: 151.85px;
     }
     
     /* Additional styles for image inside image-logo */
