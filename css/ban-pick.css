@@ -5,6 +5,9 @@ div.pick {
     margin-right: 20px;
 
 }
+body{
+    font-family: 'Nunito' !important;
+}
 
 div.ban-pick {
     display: flex;
@@ -60,3 +63,163 @@ p.team-name{
     background-color: rgb(255, 130, 130);
     
 }
+
+.stat-left,.stat-right{
+    display: flex;
+    justify-content: center;
+}
+
+.stat-left p,.stat-right p{
+    margin: 0;
+    padding: 10px 0;
+    font-size: 17px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767.98px){
+    table.team1,table.team2{
+        overflow: auto;
+        width: 100%;
+    }
+    table.team1 td,table.team1 th{
+        background-color: rgb(97, 97, 248);
+    }
+    table.team1 tr td:first-child,table.team1 th:first-child{
+        position: sticky;
+        background-color: rgb(97, 97, 248);
+        left: 0;
+    }
+    table.team2 td,table.team2 th{
+        background-color: rgb(255, 130, 130);
+    }
+    table.team2 tr td:first-child,table.team2 th:first-child{
+        position: sticky;
+        background-color: rgb(255, 130, 130);
+        left: 0;
+    }
+    div.wordBox1{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 767.98px) and (min-width:431px){
+    div.ban-box,div.pick-box{
+        width: 40px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 14px;
+        font-family: 'Nunito';
+    }
+}
+
+@media screen and (max-width: 430.98px) and (min-width:414px){
+    div.ban-box,div.pick-box{
+        width: 40px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 14px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 15px;
+
+    }
+    div.ban-pick{
+        display: block;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 413.98px) and (min-width:390px){
+    div.ban-box,div.pick-box{
+        width: 40px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 13.5px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 15px;
+
+    }
+    div.ban-pick{
+        display: block;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 389.98px) and (min-width:375px){
+    div.ban-box,div.pick-box{
+        width: 36px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 13px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 15px;
+
+    }
+    div.ban-pick{
+        display: block;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 374.98px) and (min-width:360px){
+    div.ban-box,div.pick-box{
+        width: 35px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 13px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 15px;
+
+    }
+    div.ban-pick{
+        display: block;
+    }
+}
+@media screen and (max-width: 359.98px) and (min-width:320px){
+    div.ban-box,div.pick-box{
+        width: 23px;
+    }
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 11px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 10px;
+
+    }
+}
+@media screen and (max-width: 319.98px){
+    div.ban-box,div.pick-box{
+        width: 30px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    
+    div.stat-left p,div.stat-right p, table.team1,table.team2{
+        font-size: 11px;
+        font-family: 'Nunito';
+    }
+    .stat-left p,.stat-right p{
+        margin-left: 10px;
+
+        
+    }
+    div.ban-pick{
+        display: block;
+        margin-left: 10px;
+    }
+}
+

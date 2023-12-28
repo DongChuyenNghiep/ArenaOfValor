@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 let SHEET_RANGE_TABLE = 'B3:G133';
 let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-let SHEET_TITLE_DAY = 'KDA test';
+let SHEET_TITLE_DAY = 'Group A';
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_DAY}&range=${SHEET_RANGE_TABLE}`;
 
 

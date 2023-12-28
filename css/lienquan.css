@@ -1,7 +1,9 @@
 @import url(//fonts.googleapis.com/css?family=Nunito);
 .team-logo {
     height: 70px;
-
+} 
+.w3-container{
+    padding: 0.1rem 2px !important;
 }
 body{
     font-family: 'Nunito';
@@ -131,7 +133,15 @@ div.table_rank_A {
     margin-top: 10px;  
     width: 100%;
     transition: max-height 0.3s ease-in-out;
+    
+    
   }
+  .wordBox1 table{
+    border-radius: 20px;
+  }
+  tr:last-child td{
+    border-bottom: none;
+}
   .wordBox{
     display: none;
     border: 1px solid #ccc;
@@ -210,7 +220,7 @@ body {
 }
 .row1{
     display: flex;
-    padding: 7px 20px;
+    padding: 5px;
 }
 
 .loser-darker {
@@ -280,7 +290,7 @@ h6.match:nth-child(1) {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 2px;
     background-color: #08142c;
 }
 
@@ -440,9 +450,7 @@ h3 {
         padding: 6px 0;
     }
 
-    .row1 {
-        width: 95%;
-    }
+
 
     div.cac-vong {
         padding: 40px 0px 0 15px;
@@ -605,7 +613,7 @@ h3 {
     }
 
     .row1 {
-        padding: 10px;
+        
         width: 100%;
 
     }
@@ -652,7 +660,6 @@ h3 {
     }
 
     .sticky-col {
-        position: -webkit-sticky;
         position: sticky;
 
     }

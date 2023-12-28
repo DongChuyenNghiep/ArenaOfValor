@@ -20,7 +20,7 @@ function show() {
 
 
 let SHEET_TITLE_QUALIFIER = 'Fixture';
-let SHEET_RANGE_A = 'A4:Z15';
+let SHEET_RANGE_A = 'A4:U15';
 
 let FULL_URL_A_1 = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_A}`;
 
@@ -166,6 +166,7 @@ fetch(FULL_URL_A_1)
       let team1 = document.createElement('p');
       team1.classList.add('team-name');
       team1.textContent = rowData[1].v;
+      team_left.appendChild(team1);
       let ban_pick_left = document.createElement('div');
       ban_pick_left.classList.add('ban-pick');
       ban_pick_left.id = 'ban-pick-left';
@@ -173,19 +174,19 @@ fetch(FULL_URL_A_1)
       ban_left.classList.add('ban');
       ban_pick_left.appendChild(ban_left);
       let ban_box_left_1 = document.createElement('div');
-      ban_box_left_1.classList.add('ban-box','ban-box-left');
+      ban_box_left_1.classList.add('ban-box', 'ban-box-left');
       ban_left.appendChild(ban_box_left_1);
       let ban_box_left_2 = document.createElement('div');
-      ban_box_left_2.classList.add('ban-box','ban-box-left');
+      ban_box_left_2.classList.add('ban-box', 'ban-box-left');
       ban_left.appendChild(ban_box_left_2);
       let ban_box_left_3 = document.createElement('div');
-      ban_box_left_3.classList.add('ban-box','ban-box-left');
+      ban_box_left_3.classList.add('ban-box', 'ban-box-left');
       ban_left.appendChild(ban_box_left_3);
       let ban_box_left_4 = document.createElement('div');
-      ban_box_left_4.classList.add('ban-box','ban-box-left');
+      ban_box_left_4.classList.add('ban-box', 'ban-box-left');
       ban_left.appendChild(ban_box_left_4);
       let ban_box_left_5 = document.createElement('div');
-      ban_box_left_5.classList.add('ban-box','ban-box-left');
+      ban_box_left_5.classList.add('ban-box', 'ban-box-left');
       ban_left.appendChild(ban_box_left_5);
       let cross_ban = document.createElement('div');
       cross_ban.classList.add('line');
@@ -204,46 +205,60 @@ fetch(FULL_URL_A_1)
       pick_left.classList.add('pick');
       ban_pick_left.appendChild(pick_left);
       let pick_box_left_1 = document.createElement('div');
-      pick_box_left_1.classList.add('pick-box','pick-box-left');
+      pick_box_left_1.classList.add('pick-box', 'pick-box-left');
       pick_left.appendChild(pick_box_left_1);
       let pick_box_left_2 = document.createElement('div');
-      pick_box_left_2.classList.add('pick-box','pick-box-left');
+      pick_box_left_2.classList.add('pick-box', 'pick-box-left');
       pick_left.appendChild(pick_box_left_2);
       let pick_box_left_3 = document.createElement('div');
-      pick_box_left_3.classList.add('pick-box','pick-box-left');
+      pick_box_left_3.classList.add('pick-box', 'pick-box-left');
       pick_left.appendChild(pick_box_left_3);
       let pick_box_left_4 = document.createElement('div');
-      pick_box_left_4.classList.add('pick-box','pick-box-left');
+      pick_box_left_4.classList.add('pick-box', 'pick-box-left');
       pick_left.appendChild(pick_box_left_4);
       let pick_box_left_5 = document.createElement('div');
-      pick_box_left_5.classList.add('pick-box','pick-box-left');
+      pick_box_left_5.classList.add('pick-box', 'pick-box-left');
       pick_left.appendChild(pick_box_left_5);
       pick_box_left_1.appendChild(image.cloneNode(true));
       pick_box_left_2.appendChild(image.cloneNode(true));
       pick_box_left_3.appendChild(image.cloneNode(true));
       pick_box_left_4.appendChild(image.cloneNode(true));
       pick_box_left_5.appendChild(image.cloneNode(true));
-      team_left.appendChild(team1);
+      let stat_left = document.createElement('div');
+      stat_left.classList.add('stat-left');
+      let kda_left = document.createElement('p');
+      kda_left.classList.add('kda');
+      kda_left.textContent = `K/D/A: ${rowData[9].v}/${rowData[11].v}/${rowData[15].v}`;
+      let turret_left = document.createElement('p');
+      turret_left.classList.add('turret-left');
+      turret_left.textContent = `Số trụ đã phá hủy: ${rowData[19].v}`
+      let damage_left = document.createElement('p');
+      damage_left.textContent = `Tổng sát thương: ${rowData[17].v}`;
+      stat_left.appendChild(kda_left);
+      stat_left.appendChild(turret_left);
+      stat_left.appendChild(damage_left);
+      team_left.appendChild(stat_left);
       team_left.appendChild(ban_pick_left);
 
-      
+
+
 
       let table_left = document.createElement('table');
       table_left.classList.add('team1');
       let thead_left = document.createElement('thead');
       let th_thead_left1 = document.createElement('th');
-      th_thead_left1.classList.add("first-col", "sticky-col");
-      th_thead_left1.textContent = 'Tên thành viên';
+      th_thead_left1.classList.add("first-col");
+      th_thead_left1.textContent = '';
       let th_thead_left2 = document.createElement('th');
-      th_thead_left2.textContent = 'Kill';
+      th_thead_left2.textContent = 'K';
       let th_thead_left3 = document.createElement('th');
-      th_thead_left3.textContent = 'Death';
+      th_thead_left3.textContent = 'D';
       let th_thead_left4 = document.createElement('th');
-      th_thead_left4.textContent = 'Assist';
+      th_thead_left4.textContent = 'A';
       let th_thead_left5 = document.createElement('th');
       th_thead_left5.textContent = 'KDA';
       let th_thead_left6 = document.createElement('th');
-      th_thead_left6.textContent = 'Damage';
+      th_thead_left6.textContent = 'DMG';
       let tbody_left = document.createElement('tbody');
       tbody_left.id = `team-left-${i + 1}`;
       let tr_table_left = document.createElement('tr');
@@ -254,7 +269,7 @@ fetch(FULL_URL_A_1)
       let team2 = document.createElement('p');
       team2.classList.add('team-name');
       team2.textContent = rowData[6].v;
-      team_right.appendChild(team2);
+      team_right.appendChild(team2)
       let ban_pick_right = document.createElement('div');
       ban_pick_right.classList.add('ban-pick');
       ban_pick_right.id = 'ban-pick-right';
@@ -262,21 +277,21 @@ fetch(FULL_URL_A_1)
       ban_right.classList.add('ban');
       ban_pick_right.appendChild(ban_right);
       let ban_box_right_1 = document.createElement('div');
-      ban_box_right_1.classList.add('ban-box','ban-box-right');
+      ban_box_right_1.classList.add('ban-box', 'ban-box-right');
       ban_right.appendChild(ban_box_right_1);
       let ban_box_right_2 = document.createElement('div');
-      ban_box_right_2.classList.add('ban-box','ban-box-right');
+      ban_box_right_2.classList.add('ban-box', 'ban-box-right');
       ban_right.appendChild(ban_box_right_2);
       let ban_box_right_3 = document.createElement('div');
-      ban_box_right_3.classList.add('ban-box','ban-box-right');
+      ban_box_right_3.classList.add('ban-box', 'ban-box-right');
       ban_right.appendChild(ban_box_right_3);
       let ban_box_right_4 = document.createElement('div');
-      ban_box_right_4.classList.add('ban-box','ban-box-right');
+      ban_box_right_4.classList.add('ban-box', 'ban-box-right');
       ban_right.appendChild(ban_box_right_4);
       let ban_box_right_5 = document.createElement('div');
-      ban_box_right_5.classList.add('ban-box','ban-box-right');
+      ban_box_right_5.classList.add('ban-box', 'ban-box-right');
       ban_right.appendChild(ban_box_right_5);
-      
+
       ban_box_right_1.appendChild(cross_ban.cloneNode(true));
       ban_box_right_2.appendChild(cross_ban.cloneNode(true));
       ban_box_right_3.appendChild(cross_ban.cloneNode(true));
@@ -291,33 +306,52 @@ fetch(FULL_URL_A_1)
       pick_right.classList.add('pick');
       ban_pick_right.appendChild(pick_right);
       let pick_box_right_1 = document.createElement('div');
-      pick_box_right_1.classList.add('pick-box','pick-box-left');
+      pick_box_right_1.classList.add('pick-box', 'pick-box-left');
       pick_right.appendChild(pick_box_right_1);
       let pick_box_right_2 = document.createElement('div');
-      pick_box_right_2.classList.add('pick-box','pick-box-left');
+      pick_box_right_2.classList.add('pick-box', 'pick-box-left');
       pick_right.appendChild(pick_box_right_2);
       let pick_box_right_3 = document.createElement('div');
-      pick_box_right_3.classList.add('pick-box','pick-box-left');
+      pick_box_right_3.classList.add('pick-box', 'pick-box-left');
       pick_right.appendChild(pick_box_right_3);
       let pick_box_right_4 = document.createElement('div');
-      pick_box_right_4.classList.add('pick-box','pick-box-left');
+      pick_box_right_4.classList.add('pick-box', 'pick-box-left');
       pick_right.appendChild(pick_box_right_4);
       let pick_box_right_5 = document.createElement('div');
-      pick_box_right_5.classList.add('pick-box','pick-box-left');
+      pick_box_right_5.classList.add('pick-box', 'pick-box-left');
       pick_right.appendChild(pick_box_right_5);
       pick_box_right_1.appendChild(image.cloneNode(true));
       pick_box_right_2.appendChild(image.cloneNode(true));
       pick_box_right_3.appendChild(image.cloneNode(true));
       pick_box_right_4.appendChild(image.cloneNode(true));
       pick_box_right_5.appendChild(image.cloneNode(true));
-      team_right.appendChild(team2);
+      let stat_right = document.createElement('div');
+      stat_right.classList.add('stat-right');
+      let kda_right = document.createElement('p');
+      kda_right.classList.add('kda');
+      kda_right.textContent = `K/D/A: ${rowData[10].v}/${rowData[12].v}/${rowData[16].v}`;
+      let turret_right = document.createElement('p');
+      turret_right.classList.add('turret-left');
+      turret_right.textContent = `Số trụ đã phá hủy: ${rowData[20].v}`
+      let damage_right = document.createElement('p');
+      damage_right.textContent = `Tổng sát thương: ${rowData[18].v}`;
+      stat_right.appendChild(kda_right);
+      stat_right.appendChild(turret_right);
+      stat_right.appendChild(damage_right);
+      team_right.appendChild(stat_right);
       team_right.appendChild(ban_pick_right);
+
+
+
       let table_right = document.createElement('table');
       table_right.classList.add('team2');
+
+
+
       let thead_right = document.createElement('thead');
       let th_thead_right1 = document.createElement('th');
       th_thead_right1.classList.add("first-col");
-      th_thead_right1.textContent = 'Tên thành viên';
+      th_thead_right1.textContent = '';
       let th_thead_right2 = document.createElement('th');
       th_thead_right2.textContent = 'Kill';
       let th_thead_right3 = document.createElement('th');
@@ -346,8 +380,12 @@ fetch(FULL_URL_A_1)
       table_left.appendChild(tbody_left);
       team_left.appendChild(table_left);
       score_break_down.appendChild(team_left);
+      let div_table_left = document.createElement('div');
+      div_table_left.classList.add('wrapper');
+      div_table_left.appendChild(table_left);
+      team_left.appendChild(div_table_left);
 
-      
+
       thead_right.appendChild(tr_table_right);
       tr_table_right.appendChild(th_thead_right1);
       tr_table_right.appendChild(th_thead_right2);
@@ -359,7 +397,10 @@ fetch(FULL_URL_A_1)
       table_right.appendChild(tbody_right);
       team_right.appendChild(table_right);
       score_break_down.appendChild(team_right);
-
+      let div_table_right = document.createElement('div');
+      div_table_right.classList.add('wrapper');
+      div_table_right.appendChild(table_right);
+      team_right.appendChild(div_table_right);
 
       // Append the team div to the row div
       rowDiv1.appendChild(teamDiv2);
