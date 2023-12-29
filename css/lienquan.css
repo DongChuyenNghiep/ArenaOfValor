@@ -2,6 +2,13 @@
 .team-logo {
     height: 70px;
 } 
+nav.nav1,nav.nav2 a{
+    font-size: 16px !important;
+    font-family: 'Nunito';
+}
+*{
+    font-family: 'Nunito';
+}
 .w3-container{
     padding: 0.1rem 8px !important;
 }
@@ -129,8 +136,7 @@ div.table_rank_A {
 }
 .wordBox1 {
     display: none;
-    border: 1px solid #ccc;
-    margin-top: 10px;  
+    border: 1px solid #ccc;  
     width: 100%;
     transition: max-height 0.3s ease-in-out;
     
