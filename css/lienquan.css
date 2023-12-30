@@ -394,12 +394,12 @@ h3 {
     div.w3-container {
         width: 82%;
         margin-left: 18%;
+        margin-top: 160px;
     }
     
     #mySidebar {
         width: 18%;
         background-color: #212529;
-        padding-top: 150px;
     }
 
     #mySidebar a {
@@ -440,6 +440,7 @@ h3 {
 
     .button-filter {
         padding: 10px 0 30px 70px;
+        margin: 20px 10px 0 0;
     }
     
 }
