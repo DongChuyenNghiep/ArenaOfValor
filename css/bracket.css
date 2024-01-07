@@ -11,7 +11,8 @@ h2{
 }
 
 body{
-  background-color: #212529 !important;
+  background-color: #5800bc !important;
+  font-family: 'Nunito' !important;
 }
 .bracket img{
   height: 30px;
@@ -51,7 +52,7 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  padding: 20px 0px 60px 60px;
+  padding: 5px 0px 60px 60px;
 }
 
 .bracket .round {
@@ -75,7 +76,7 @@ div.cac-vong a:hover::after{
 
 .bracket .round .winners>div.matchups .matchup .participants .participant {
   box-sizing: border-box;
-  color: #858585;
+  color: white;
   border-left: 4px solid #858585;
   background: black;
   width: 290px;
@@ -86,13 +87,16 @@ div.cac-vong a:hover::after{
 
 .bracket .round .winners>div.matchups .matchup .participants .participant.winner {
   color: white;
-  border-color: rgba(0, 255, 255, 0.762);
+  border-color: rgba(255, 191, 0, 0.918);
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.winner .score{
-  color: rgba(0, 255, 255, 0.762);
+  color: rgba(255, 191, 0, 0.918);
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.loser {
-  filter: brightness(50%);
+  background-color: rgb(251, 71, 71);
+  border-color: rgb(251, 71, 71);
+  color: white;
+  filter: brightness(60%);
 
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.loser .score{
@@ -165,7 +169,7 @@ div.cac-vong a:hover::after{
 }
 
 .bracket .round .winners>div.connector .line {
-  border-bottom: thin solid rgb(103, 100, 100);
+  border-bottom: thin solid white;
   height: 64px;
 }
 
@@ -182,7 +186,7 @@ div.cac-vong a:hover::after{
   width: 100%;
   height: 50%;
   border: 0 solid;
-  border-color: rgb(103, 100, 100);
+  border-color: white;
 }
 
 .bracket .round .winners>div.connector .merger:before {

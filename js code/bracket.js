@@ -194,7 +194,7 @@ fetch(FULL_URL_A)
           // Add the 'winner' class to the first div.participant
           participantDiv1.classList.add('winner');
           participantDiv2.classList.add('loser');
-        } else {
+        } else if (valueC[0] < valueC[1]){
           // Add the 'winner' class to the second div.participant
           participantDiv2.classList.add('winner');
           participantDiv1.classList.add('loser');
@@ -203,7 +203,7 @@ fetch(FULL_URL_A)
             // Add the 'winner' class to the first div.participant
             participantDiv3.classList.add('winner');
             participantDiv4.classList.add('loser');
-          } else {
+          } else if(valueC[2] < valueC[3]) {
             // Add the 'winner' class to the second div.participant
             participantDiv4.classList.add('winner');
             participantDiv3.classList.add('loser');
@@ -212,7 +212,7 @@ fetch(FULL_URL_A)
             // Add the 'winner' class to the first div.participant
             participantDiv5.classList.add('winner');
             participantDiv6.classList.add('loser');
-          } else {
+          } else if (valueC[4] < valueC[5]) {
             // Add the 'winner' class to the second div.participant
             participantDiv6.classList.add('winner');
             participantDiv5.classList.add('loser');
@@ -221,7 +221,7 @@ fetch(FULL_URL_A)
             // Add the 'winner' class to the first div.participant
             participantDiv7.classList.add('winner');
             participantDiv8.classList.add('loser');
-          } else {
+          } else if (valueC[6] < valueC[7]){
             // Add the 'winner' class to the second div.participant
             participantDiv7.classList.add('loser');
             participantDiv8.classList.add('winner');
@@ -231,7 +231,7 @@ fetch(FULL_URL_A)
             // Add the 'winner' class to the first div.participant
             participantDiv9.classList.add('winner');
             participantDiv10.classList.add('loser');
-          } else {
+          } else if (valueC[8] < valueC[9]){
             // Add the 'winner' class to the second div.participant
             participantDiv9.classList.add('loser');
             participantDiv10.classList.add('winner');
@@ -240,7 +240,7 @@ fetch(FULL_URL_A)
             // Add the 'winner' class to the first div.participant
             participantDiv11.classList.add('winner');
             participantDiv12.classList.add('loser');
-          } else {
+          } else if (valueC[10] < valueC[11]){
             // Add the 'winner' class to the second div.participant
             participantDiv11.classList.add('loser');
             participantDiv12.classList.add('winner');
@@ -248,7 +248,7 @@ fetch(FULL_URL_A)
           if(valueC[12] > valueC[13]){
             participantDiv13.classList.add('winner');
             participantDiv14.classList.add('loser');
-          }else {
+          }else if(valueC[12] < valueC[13]){
             // Add the 'winner' class to the second div.participant
             participantDiv13.classList.add('loser');
             participantDiv14.classList.add('winner');
@@ -256,7 +256,7 @@ fetch(FULL_URL_A)
           if(valueC[14] > valueC[15]){
             participantDiv15.classList.add('winner');
             participantDiv16.classList.add('loser');
-          }else {
+          }else if(valueC[14] < valueC[15]){
             // Add the 'winner' class to the second div.participant
             participantDiv15.classList.add('loser');
             participantDiv16.classList.add('winner');
@@ -274,7 +274,7 @@ fetch(FULL_URL_A)
             participantQuater1.classList.add('winner')
             participantQuater2.classList.add('loser')
           }
-          else{
+          else if(valueF[0]<valueF[1]){
             participantQuater1.classList.add('loser')
             participantQuater2.classList.add('winner')
           }
@@ -282,7 +282,7 @@ fetch(FULL_URL_A)
             participantQuater3.classList.add('winner')
             participantQuater4.classList.add('loser')
           }
-          else{
+          else if(valueF[2]<valueF[3]){
             participantQuater3.classList.add('loser')
             participantQuater4.classList.add('winner')
           }
@@ -290,7 +290,7 @@ fetch(FULL_URL_A)
             participantQuater5.classList.add('winner')
             participantQuater6.classList.add('loser')
           }
-          else{
+          else if(valueF[4]<valueF[5]){
             participantQuater5.classList.add('loser')
             participantQuater6.classList.add('winner')
           }
@@ -298,7 +298,7 @@ fetch(FULL_URL_A)
             participantQuater7.classList.add('winner')
             participantQuater8.classList.add('loser')
           }
-          else{
+          else if(valueF[6]<valueF[7]){
             participantQuater7.classList.add('loser')
             participantQuater8.classList.add('winner')
           }
@@ -310,7 +310,7 @@ fetch(FULL_URL_A)
           participantSemi1.classList.add('winner');
           participantSemi2.classList.add('loser');
         }
-        else{
+        else if (valueI[0]<valueI[1]){
           participantSemi1.classList.add('loser');
           participantSemi2.classList.add('winner');
         }
@@ -318,7 +318,7 @@ fetch(FULL_URL_A)
           participantSemi3.classList.add('winner');
           participantSemi4.classList.add('loser');
         }
-        else{
+        else if (valueI[2]<valueI[3]){
           participantSemi3.classList.add('loser');
           participantSemi4.classList.add('winner');
         }
@@ -327,7 +327,7 @@ fetch(FULL_URL_A)
         if (valueL[0] > valueL[1]){
           participantFinal1.classList.add('winner');
           participantFinal2.classList.add('loser');
-        }else{
+        }else if (valueL[0] < valueL[1]){
           participantFinal1.classList.add('loser');
           participantFinal2.classList.add('winner');
         }
