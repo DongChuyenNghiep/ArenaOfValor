@@ -52,7 +52,7 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  padding: 5px 0px 60px 60px;
+  padding: 5px 60px 60px 60px;
 }
 
 .bracket .round {
